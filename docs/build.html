@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7LBJRDWYYW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7LBJRDWYYW');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>提示词生成器 · 选题材填空即出词 | AI 短片提示词库</title>
+<meta name="description" content="选一个题材，填三个空，现场拼出可直接投喂 Seedance / 可灵 / 即梦 / Sora / Veo 的 5 段式电影感提示词。免安装、免登录、不留数据。">
+<meta name="keywords" content="AI 视频提示词生成器,提示词生成,Seedance 提示词,可灵提示词,Sora prompt generator,video prompt builder">
+<link rel="canonical" href="https://prompts.aiolaola.com/build.html">
+<meta name="robots" content="index, follow">
+<link rel="alternate" hreflang="zh-CN" href="https://prompts.aiolaola.com/build.html">
+<link rel="alternate" hreflang="en" href="https://prompts.aiolaola.com/en/build.html">
+<link rel="alternate" hreflang="x-default" href="https://prompts.aiolaola.com/build.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="提示词生成器 · 选题材填空即出词">
+<meta property="og:description" content="选题材、填三个空，现场拼出 5 段式电影感提示词，直接粘进 Seedance/可灵/Sora/Veo。免安装。">
+<meta property="og:url" content="https://prompts.aiolaola.com/build.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://prompts.aiolaola.com/assets/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="提示词生成器 · 选题材填空即出词">
+<meta name="twitter:image" content="https://prompts.aiolaola.com/assets/og-cover.png">
+<style>
+  :root{
+    --bg:#0a0b0e; --bg-soft:#0e1014; --panel:#14171d; --panel-2:#1b1f27;
+    --line:#272c36; --line-soft:#1d222b;
+    --txt:#eceef3; --txt-2:#aab2c0; --dim:#7b8494;
+    --gold:#e8b84b; --gold-soft:#f2d488; --blue:#6aa8ff; --green:#5fd08a;
+    --radius:15px; --radius-sm:10px;
+    --shadow:0 10px 40px -12px rgba(0,0,0,.7);
+    --glow:0 0 0 1px rgba(232,184,75,.35), 0 14px 40px -14px rgba(232,184,75,.25);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+    line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.035;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+  ::selection{background:rgba(232,184,75,.28)}
+
+  .nav{position:sticky;top:0;z-index:30;backdrop-filter:saturate(140%) blur(12px);
+    background:rgba(10,11,14,.78);border-bottom:1px solid var(--line-soft)}
+  .nav-in{display:flex;align-items:center;gap:16px;height:60px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.3px;white-space:nowrap}
+  .brand .mark{width:26px;height:26px;border-radius:7px;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--gold),#c9912b);color:#1a1505;font-size:15px;box-shadow:0 2px 10px rgba(232,184,75,.4)}
+  .brand b{font-size:15px}
+  .brand span{color:var(--dim);font-size:11px;font-weight:500}
+  .nav .spacer{flex:1}
+  .nav .gh{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:9px;font-size:13px;
+    font-weight:600;border:1px solid var(--line);color:var(--txt);white-space:nowrap}
+  .nav .gh:hover{border-color:var(--gold);text-decoration:none}
+  @media(max-width:680px){.brand span{display:none}}
+
+  .hero{position:relative;padding:54px 0 30px;overflow:hidden;
+    background:radial-gradient(1100px 420px at 18% -160px,rgba(232,184,75,.13),transparent 60%)}
+  .hero-in{position:relative;z-index:2}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;
+    color:var(--gold);font-weight:600;border:1px solid rgba(232,184,75,.3);border-radius:999px;padding:5px 13px;
+    background:rgba(232,184,75,.06);margin-bottom:18px}
+  .hero h1{font-size:clamp(26px,4.6vw,42px);line-height:1.16;margin:0 0 12px;letter-spacing:.3px;font-weight:800}
+  .hero h1 .g{background:linear-gradient(100deg,var(--gold),var(--gold-soft) 60%,#fff);
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p.lead{font-size:clamp(14px,2vw,16.5px);color:var(--txt-2);max-width:680px;margin:0}
+  .hero p.lead b{color:var(--txt)}
+
+  main{position:relative;z-index:2;padding-bottom:60px}
+  .builder{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start;margin-top:30px}
+  @media(max-width:900px){.builder{grid-template-columns:1fr}}
+
+  .panel{background:linear-gradient(180deg,var(--panel),#11141a);border:1px solid var(--line);
+    border-radius:var(--radius);padding:22px}
+  .panel h2{font-size:14px;margin:0 0 14px;color:var(--dim);letter-spacing:.6px;text-transform:uppercase;font-weight:700}
+
+  .genre-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-bottom:20px}
+  .g-chip{display:flex;align-items:center;gap:7px;padding:9px 11px;border-radius:10px;border:1px solid var(--line);
+    background:var(--panel-2);color:var(--txt-2);font-size:13px;cursor:pointer;user-select:none;transition:all .14s}
+  .g-chip:hover{border-color:var(--dim);color:var(--txt)}
+  .g-chip.active{border-color:var(--gold);background:rgba(232,184,75,.1);color:var(--gold-soft);font-weight:600}
+  .g-chip .ico{font-size:15px}
+
+  label{display:block;font-size:12.5px;color:var(--dim);margin:14px 0 6px;font-weight:600}
+  label:first-of-type{margin-top:0}
+  input[type=text],textarea{width:100%;padding:10px 12px;border-radius:9px;border:1px solid var(--line);
+    background:var(--bg-soft);color:var(--txt);font-size:13.5px;font-family:inherit;resize:vertical}
+  input[type=text]:focus,textarea:focus{outline:none;border-color:var(--gold)}
+  .hint{font-size:11.5px;color:var(--dim);margin-top:4px}
+
+  .out-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+  .out-head h2{margin:0;flex:1}
+  .sbtn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:9px;border:1px solid var(--line);
+    background:var(--panel-2);color:var(--txt);font-size:13px;cursor:pointer;font-weight:600;transition:all .14s;white-space:nowrap}
+  .sbtn:hover{border-color:var(--gold);color:var(--gold)}
+  .sbtn.primary{background:linear-gradient(135deg,var(--gold),#d9a23a);color:#1a1505;border-color:transparent}
+  .sbtn.primary:hover{color:#1a1505;filter:brightness(1.05)}
+  .sbtn.ok{border-color:var(--green);color:var(--green)}
+  .out-box{background:#0c0e13;border:1px solid var(--line);border-radius:11px;padding:16px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.75;
+    color:#d6dbe6;white-space:pre-wrap;word-break:break-word;max-height:600px;overflow-y:auto}
+  .out-box b{color:var(--gold-soft);font-family:inherit}
+  .more-link{margin-top:14px;font-size:12.5px;color:var(--dim)}
+
+  .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);z-index:80;
+    background:var(--panel);border:1px solid var(--green);color:var(--txt);padding:11px 20px;border-radius:11px;
+    font-size:14px;font-weight:600;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:all .25s}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  .toast .dot{color:var(--green);margin-right:7px}
+
+  .why{margin-top:34px;padding:18px 20px;border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+    background:var(--panel);font-size:13px;color:var(--txt-2)}
+  .why b{color:var(--txt)}
+
+  footer{position:relative;z-index:2;border-top:1px solid var(--line);margin-top:44px;padding:26px 0 46px;color:var(--dim);font-size:13px}
+  footer a{color:var(--txt-2);text-decoration:underline}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="wrap nav-in">
+  <a class="brand" href="./">
+    <span class="mark">🎬</span>
+    <b>AI 短片提示词库</b><span>Cinematic Prompt Library</span>
+  </a>
+  <span class="spacer"></span>
+  <a class="gh" href="./">← 提示词库</a>
+  <a class="gh" href="https://github.com/jnMetaCode/ai-shortfilm-prompts" target="_blank">★ GitHub</a>
+</div></nav>
+
+<header class="hero"><div class="wrap hero-in">
+  <div class="eyebrow">免安装 · 免登录 · 不留数据</div>
+  <h1>选题材、填三个空<br><span class="g">现场拼出电影感提示词</span></h1>
+  <p class="lead">用本库的 <b>5 段式方法论</b> 现场组装：核心主题 / 人物场景 / 氛围画质 / 运镜规则 / 分镜起手式。
+    生成的是<b>可直接编辑</b>的起手骨架，不是黑盒 —— 想要更完整的多镜范例，去
+    <a href="./#lib">模板库</a>看题材原文，或装 <a href="https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/skills/shortfilm-prompt/SKILL.md" target="_blank">Claude Code Skill</a> 做完整生成。</p>
+</header>
+
+<main class="wrap">
+  <div class="builder">
+    <div class="panel">
+      <h2>1 · 选题材</h2>
+      <div class="genre-grid" id="genre-grid"></div>
+
+      <label for="subject">2 · 主体 / 角色（越具体越好）</label>
+      <input type="text" id="subject" placeholder="例：一只中型黄色短毛土狗，一只耳朵尖耷拉">
+      <label for="scene">3 · 场景 / 环境</label>
+      <input type="text" id="scene" placeholder="例：一栋南方老宅的小院，木门槛，一扇老木窗">
+      <label for="beat">4 · 关键动作 / 看点</label>
+      <input type="text" id="beat" placeholder="例：小狗第一次蹭到主人手心，尾巴摇得很快">
+      <label for="ambient">5 · 环境音（可选）</label>
+      <input type="text" id="ambient" placeholder="例：风吹树叶、远处狗吠、木门吱呀声">
+      <p class="hint">留空的字段会用占位符 <code>{{...}}</code> 提示你在拿到输出后手动补上。</p>
+    </div>
+
+    <div class="panel">
+      <div class="out-head">
+        <h2 style="margin:0">生成结果</h2>
+        <button class="sbtn primary" id="copy-btn">⧉ 复制提示词</button>
+      </div>
+      <div class="out-box" id="output"></div>
+      <p class="more-link" id="more-link"></p>
+    </div>
+  </div>
+
+  <div class="why">
+    <b>为什么这样拼？</b> 三条反直觉规则贯穿全部输出：① 用真实相机/镜头型号而非「电影感」这种空泛词；
+    ② 主动描述瑕疵（磨损/污渍/疲惫感），完美看起来才假；③ 结尾留白，不要配乐堆情绪、不要爆炸式收尾。
+    完整方法论见 <a href="https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/methodology.zh.md" target="_blank">methodology.zh.md</a>。
+  </div>
+</main>
+
+<div class="toast" id="toast"><span class="dot">✓</span><span id="toast-t">已复制</span></div>
+
+<footer><div class="wrap">
+  <p style="margin:0 0 6px">本工具纯前端运行，不上传、不记录你填写的任何内容。方法论 / 数据 MIT 协议，
+    源码见 <a href="https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/docs/build.html" target="_blank">build.html</a>。</p>
+  <p style="margin:0">题材覆盖不全？<a href="./#lib">模板库</a>里有 21 个完整题材，也欢迎
+    <a href="https://github.com/jnMetaCode/ai-shortfilm-prompts/issues" target="_blank">提 issue</a> 补充。</p>
+</div></footer>
+
+<script>
+const GENRES = [
+  {id:"pet-lifetime-narrative", ico:"🐕", label:"萌宠亲情",
+   core:"温暖怀旧家庭电影感 | 跨越一生的陪伴 | 四季流逝的时间叙事 | 克制写实 | 不煽情、无 MV 浮夸滤镜",
+   atmosphere:"ARRICAM 摄影机 + Cooke S4 复古定焦镜头，Kodak Vision3 250D 35mm 胶片质感。暖金自然光，低对比，柔和有机颗粒。全程锁一档暖色调，只靠窗外季节和光线角度标记时间流逝，绝不改色调。",
+   camera:"多镜剪辑叙事，以静态或缓慢景别为主，与主体平视；一两次缓慢推近特写。每个镜头落在同一场景位置，让时间感清晰可读。",
+   ending:"不要台词，不要煽情配乐；一个眼神、一次呼吸、一件旧物的特写收尾。"},
+  {id:"family-recipe-farewell", ico:"🍲", label:"妈妈的菜谱",
+   core:"温暖怀旧家庭电影 | 一张菜谱传承一生 | 跨季节延时 | 克制写实 | 不煽情、不要 MV 浮夸感",
+   atmosphere:"暖黄厨房自然光，Kodak Vision3 胶片质感，低对比柔颗粒。锁一档暖色调贯穿全片，时间靠灶台/窗光/人物年龄标记。",
+   camera:"多镜剪辑，手部特写与人物中景交替；缓慢推近关键道具（菜谱纸页/餐具）。",
+   ending:"结尾落在一张空椅子或一份摆好没人吃的饭——不要哭戏特写，不要音乐煽情。"},
+  {id:"elderly-cat-companion", ico:"🐈", label:"奶奶与猫",
+   core:"温暖怀旧家庭电影 | 空巢老人与留下来的流浪猫 | 跨季节的安静相伴 | 克制写实 | 不煽情、不要 MV 浮夸感",
+   atmosphere:"老式居所里的柔和侧逆光，暖灰色调，轻颗粒胶片质感。锁一档色调，四季变化只靠窗外景物和衣着标记。",
+   camera:"大量静态长镜头，人与动物保持画面内的沉默陪伴；克制使用推近。",
+   ending:"一部没人接的手机、一个空碗——不要对白，不要音乐堆情绪。"},
+  {id:"animal-vlog", ico:"🐶", label:"拟人动物VLog",
+   core:"第一人称动物 VLog | 手持自拍 POV | 自然日光 | 同步说话+环境音 | 迷人的写实感，无诡异 CG 毛发",
+   atmosphere:"手机前置摄像头质感，自然日光，轻微畸变广角。真实毛发材质与光泽，不做过度磨皮。",
+   camera:"手持自拍视角贯穿，偶尔轻微晃动模拟真实手持；口播与画面同步。",
+   ending:"一个憨态可掬的小失误收尾（说秃噜嘴/被风吹到毛）——不要摆拍式完美结尾。"},
+  {id:"food-asmr", ico:"🍳", label:"食物ASMR",
+   core:"美食 ASMR | 极限微距感官特写 | 自然窗光 | 清脆同步拟音 | 诱人写实，不要过饱和的「美食色情」",
+   atmosphere:"自然窗光侧逆打光，突出蒸汽与油光质感。真实食物纹理与不完美（焦边、洒落的碎屑）。",
+   camera:"极限微距特写为主，慢速推近或环绕；镜头几乎不离开食物本体。",
+   ending:"一口咬下或一次舀起的瞬间定格收尾——声音是主角，不要背景音乐盖过拟音。"},
+  {id:"product-commercial", ico:"📦", label:"产品广告",
+   core:"高端产品广告 | 微距触感写实 | 受控硬主光 + 柔补光 | 节拍同步揭示 | 无塑料感 CG 高光、无虚空悬浮渲染",
+   atmosphere:"硬主光+柔补光的商业棚拍质感，真实材质反光与阴影过渡，避免死白高光。",
+   camera:"节拍驱动的多镜揭示：光带扫过→细节特写→整体亮相，每个切点卡在产品的一个功能点上。",
+   ending:"定格在产品的一个真实使用瞬间，不要漂浮渲染式的收尾镜头。"},
+  {id:"cyberpunk-city", ico:"🌃", label:"赛博城市",
+   core:"霓虹赛博朋克大都会 | 雨夜漫游 | 体积感薄雾 | 低饱和墨绿底色 + 霓虹点缀 | 氛围写实，不要游戏 CG 城市，不要干净渲染",
+   atmosphere:"好莱坞青橙对比，冷橙灰与暗青营造压抑感；高强度霓虹橙蓝，浓雾中光线扩散。Sony Venice 摄影机 + Canon K-35 镜头组，手持贯穿全程。",
+   camera:"长镜头漫游为主，缓慢横移或跟拍，让环境本身成为主角；克制使用快切。",
+   ending:"一处无人的空镜、雨水打在霓虹招牌上——不要角色定妆式收尾特写。"},
+  {id:"sci-fi-space", ico:"🚀", label:"科幻太空",
+   core:"硬科幻太空 | 失重物理 | 宏大尺度 | 克制的真空静默 | 照片级 NASA 实拍写实感，无游戏过场动画感",
+   atmosphere:"模拟 IMAX 摄影机 + Panavision 镜头组，24 格模拟运动模糊。低饱和好莱坞青橙，暗部压缩但保留细节。",
+   camera:"静态大远景确立尺度，配合缓慢的失重漂浮运动；舱外镜头绝对静音，只保留呼吸/通讯杂音。",
+   ending:"渺小的人影漂浮在浩瀚背景前，不要爆炸收尾，不要配乐堆情绪。"},
+  {id:"micro-drama", ico:"🎭", label:"竖屏短剧",
+   core:"竖屏短剧 | 对话对峙 | 钩子前置的冷开场 | shot-reverse-shot（正反打）| 写实克制表演，不要狗血浮夸",
+   atmosphere:"竖屏 9:16 构图，脸部占比大，硬光突出情绪转折的瞬间。",
+   camera:"前 2 秒冷开钩子直接进冲突；正反打对话为主，关键台词卡切给反应镜头。",
+   ending:"悬念式收尾，画面定格在一个未解决的表情或动作上——不要给出答案。"},
+  {id:"movie-trailer", ico:"🎟️", label:"电影预告片",
+   core:"电影感预告片 | 层层升级的多镜蒙太奇 | 全片锁定一种胶片色 | 由声音设计驱动 | 克制的揭示,无俗套旁白,无快速频闪硬切",
+   atmosphere:"全片锁一档胶片调色，节奏由声音设计（低频鼓点/静默/骤停）驱动而非音乐旋律。",
+   camera:"递进式多镜剪辑，镜头时长逐渐缩短制造加速感；最后收在切黑+片名卡。",
+   ending:"切黑，片名淡入——不要旁白，不要解释性台词。"},
+  {id:"car-commercial", ico:"🚗", label:"汽车广告",
+   core:"汽车广告 | 运动中的反光车身 | 速度与造型之美 | 移动光带揭示车形 | 写实，不要塑料感 CG 车，不要悬浮在虚空里的渲染图",
+   atmosphere:"移动光带扫过车身揭示线条，真实环境反射（云层、路灯、树影）映在漆面上。",
+   camera:"贴地跟拍+摇臂升降组合，强调速度感与体量感；避免悬浮在纯色背景里的渲染感。",
+   ending:"定格在车灯或车标的一处细节反光，不要 360° 展示式收尾。"},
+  {id:"music-video", ico:"🎵", label:"音乐MV",
+   core:"音乐 MV | 卡点多镜剪辑 | 一种鲜明色调 | 表演能量 | 不做对口型字面化、不做无动机乱剪",
+   atmosphere:"一种鲜明饱和的主色调贯穿全片，硬光勾勒轮廓，强化表演能量感。",
+   camera:"卡点剪辑，镜头切换踩在鼓点上；进副歌/hook 部分剪辑速度明显加快。",
+   ending:"收在一个静止的表演瞬间或残影叠化，不要突然黑场式收尾。"},
+  {id:"dance", ico:"💃", label:"舞蹈编舞",
+   core:"舞蹈影像 | 全身连续运动 | 身体卡节拍 | 锁一档大胆调色 | 真实身体运动,不要僵硬 mocap 感、不要碎切",
+   atmosphere:"单一大胆调色贯穿，硬光勾出身体轮廓和肌肉线条，避免磨皮式失真。",
+   camera:"尽量保持全身入画的连续长镜头，避免过度碎切打断身体的连贯性；镜头运动本身也踩节拍。",
+   ending:"定格在一个身体张力最强的静止瞬间收尾，不要淡出式收尾。"},
+  {id:"found-footage-horror", ico:"📹", label:"伪纪录恐怖", noBreath:true,
+   core:"found-footage horror | 固定监控视角 | 夜视/噪点模式 | 靠静止制造恐惧 | 不要 jumpscare 血腥，不要电影质感",
+   atmosphere:"固定监控画质——夹带时间戳、噪点、偶尔的信号丢帧；夜视模式下的绿色/红外颗粒质感。",
+   camera:"机位完全固定，绝不运镜；恐惧感靠画面里极细微、几乎难以察觉的变化制造，而不是镜头运动。",
+   ending:"信号中断或时间戳跳格收尾，绝不给出明确的「看到了什么」画面。"},
+];
+
+let curGenre = GENRES[0];
+const grid = document.getElementById('genre-grid');
+grid.innerHTML = GENRES.map(g=>
+  `<div class="g-chip ${g.id===curGenre.id?'active':''}" data-id="${g.id}">
+     <span class="ico">${g.ico}</span><span>${g.label}</span>
+   </div>`).join('');
+grid.querySelectorAll('.g-chip').forEach(el=>el.onclick=()=>{
+  curGenre = GENRES.find(g=>g.id===el.dataset.id);
+  grid.querySelectorAll('.g-chip').forEach(x=>x.classList.toggle('active', x===el));
+  render();
+});
+
+const $ = id => document.getElementById(id);
+['subject','scene','beat','ambient'].forEach(id => $(id).oninput = render);
+
+function ph(v, fallback){ return v && v.trim() ? v.trim() : fallback; }
+
+function render(){
+  const subject = ph($('subject').value, "{{主体/角色的具体外观描述}}");
+  const scene = ph($('scene').value, "{{场景/环境描述}}");
+  const beat = ph($('beat').value, "{{关键动作/看点}}");
+  const ambient = ph($('ambient').value, "{{按场景补充环境音}}");
+  const g = curGenre;
+
+  const out = `1 · 核心主题
+${g.core}
+
+2 · 人物与场景
+主体：${subject}
+场景：${scene}
+瑕疵细节：保留至少 2 处不完美（磨损/污渍/疲惫感/不对称），拒绝过度美化。
+
+3 · 氛围与画质
+${g.atmosphere}
+
+4 · 运镜规则
+${g.camera}
+${g.noBreath ? '' : 'Handheld shot. 全程保持极细微、呼吸感的镜头浮动，增强临场感。\n'}声音：无配乐，仅保留现场收音 —— ${ambient}。
+
+5 · 分镜（起）
+${beat}
+
+结尾（克制）：${g.ending}`;
+
+  $('output').textContent = out;
+  $('more-link').innerHTML = `想看完整多镜范例？ → <a href="p/${g.id}.zh.html" target="_blank">${g.label}题材原文</a>`;
+}
+
+document.getElementById('copy-btn').onclick = async () => {
+  await navigator.clipboard.writeText($('output').textContent);
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  clearTimeout(t._t); t._t = setTimeout(()=>t.classList.remove('show'), 1800);
+};
+
+render();
+</script>
+</body>
+</html>

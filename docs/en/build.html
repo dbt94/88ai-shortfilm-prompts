@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7LBJRDWYYW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7LBJRDWYYW');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prompt Builder · Pick a genre, fill 3 blanks | AI Short Film Prompts</title>
+<meta name="description" content="Pick a genre, fill in three blanks, and assemble a 5-stage cinematic prompt ready to paste into Seedance / Kling / Sora / Veo. No install, no login, no data collected.">
+<meta name="keywords" content="ai video prompt generator, ai video prompt builder, sora prompt generator, cinematic prompt builder, video prompt tool">
+<link rel="canonical" href="https://prompts.aiolaola.com/en/build.html">
+<meta name="robots" content="index, follow">
+<link rel="alternate" hreflang="en" href="https://prompts.aiolaola.com/en/build.html">
+<link rel="alternate" hreflang="zh-CN" href="https://prompts.aiolaola.com/build.html">
+<link rel="alternate" hreflang="x-default" href="https://prompts.aiolaola.com/build.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Prompt Builder · Pick a genre, fill 3 blanks">
+<meta property="og:description" content="Pick a genre, fill three blanks, assemble a 5-stage cinematic prompt for Seedance/Kling/Sora/Veo. No install.">
+<meta property="og:url" content="https://prompts.aiolaola.com/en/build.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://prompts.aiolaola.com/assets/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Prompt Builder · Pick a genre, fill 3 blanks">
+<meta name="twitter:image" content="https://prompts.aiolaola.com/assets/og-cover.png">
+<style>
+  :root{
+    --bg:#0a0b0e; --bg-soft:#0e1014; --panel:#14171d; --panel-2:#1b1f27;
+    --line:#272c36; --line-soft:#1d222b;
+    --txt:#eceef3; --txt-2:#aab2c0; --dim:#7b8494;
+    --gold:#e8b84b; --gold-soft:#f2d488; --blue:#6aa8ff; --green:#5fd08a;
+    --radius:15px; --radius-sm:10px;
+    --shadow:0 10px 40px -12px rgba(0,0,0,.7);
+    --glow:0 0 0 1px rgba(232,184,75,.35), 0 14px 40px -14px rgba(232,184,75,.25);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+    line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.035;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+  ::selection{background:rgba(232,184,75,.28)}
+
+  .nav{position:sticky;top:0;z-index:30;backdrop-filter:saturate(140%) blur(12px);
+    background:rgba(10,11,14,.78);border-bottom:1px solid var(--line-soft)}
+  .nav-in{display:flex;align-items:center;gap:16px;height:60px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.3px;white-space:nowrap}
+  .brand .mark{width:26px;height:26px;border-radius:7px;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--gold),#c9912b);color:#1a1505;font-size:15px;box-shadow:0 2px 10px rgba(232,184,75,.4)}
+  .brand b{font-size:15px}
+  .brand span{color:var(--dim);font-size:11px;font-weight:500}
+  .nav .spacer{flex:1}
+  .nav .gh{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:9px;font-size:13px;
+    font-weight:600;border:1px solid var(--line);color:var(--txt);white-space:nowrap}
+  .nav .gh:hover{border-color:var(--gold);text-decoration:none}
+  @media(max-width:680px){.brand span{display:none}}
+
+  .hero{position:relative;padding:54px 0 30px;overflow:hidden;
+    background:radial-gradient(1100px 420px at 18% -160px,rgba(232,184,75,.13),transparent 60%)}
+  .hero-in{position:relative;z-index:2}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;
+    color:var(--gold);font-weight:600;border:1px solid rgba(232,184,75,.3);border-radius:999px;padding:5px 13px;
+    background:rgba(232,184,75,.06);margin-bottom:18px}
+  .hero h1{font-size:clamp(26px,4.6vw,42px);line-height:1.16;margin:0 0 12px;letter-spacing:.3px;font-weight:800}
+  .hero h1 .g{background:linear-gradient(100deg,var(--gold),var(--gold-soft) 60%,#fff);
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p.lead{font-size:clamp(14px,2vw,16.5px);color:var(--txt-2);max-width:680px;margin:0}
+  .hero p.lead b{color:var(--txt)}
+
+  main{position:relative;z-index:2;padding-bottom:60px}
+  .builder{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start;margin-top:30px}
+  @media(max-width:900px){.builder{grid-template-columns:1fr}}
+
+  .panel{background:linear-gradient(180deg,var(--panel),#11141a);border:1px solid var(--line);
+    border-radius:var(--radius);padding:22px}
+  .panel h2{font-size:14px;margin:0 0 14px;color:var(--dim);letter-spacing:.6px;text-transform:uppercase;font-weight:700}
+
+  .genre-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-bottom:20px}
+  .g-chip{display:flex;align-items:center;gap:7px;padding:9px 11px;border-radius:10px;border:1px solid var(--line);
+    background:var(--panel-2);color:var(--txt-2);font-size:13px;cursor:pointer;user-select:none;transition:all .14s}
+  .g-chip:hover{border-color:var(--dim);color:var(--txt)}
+  .g-chip.active{border-color:var(--gold);background:rgba(232,184,75,.1);color:var(--gold-soft);font-weight:600}
+  .g-chip .ico{font-size:15px}
+
+  label{display:block;font-size:12.5px;color:var(--dim);margin:14px 0 6px;font-weight:600}
+  label:first-of-type{margin-top:0}
+  input[type=text],textarea{width:100%;padding:10px 12px;border-radius:9px;border:1px solid var(--line);
+    background:var(--bg-soft);color:var(--txt);font-size:13.5px;font-family:inherit;resize:vertical}
+  input[type=text]:focus,textarea:focus{outline:none;border-color:var(--gold)}
+  .hint{font-size:11.5px;color:var(--dim);margin-top:4px}
+
+  .out-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+  .out-head h2{margin:0;flex:1}
+  .sbtn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:9px;border:1px solid var(--line);
+    background:var(--panel-2);color:var(--txt);font-size:13px;cursor:pointer;font-weight:600;transition:all .14s;white-space:nowrap}
+  .sbtn:hover{border-color:var(--gold);color:var(--gold)}
+  .sbtn.primary{background:linear-gradient(135deg,var(--gold),#d9a23a);color:#1a1505;border-color:transparent}
+  .sbtn.primary:hover{color:#1a1505;filter:brightness(1.05)}
+  .sbtn.ok{border-color:var(--green);color:var(--green)}
+  .out-box{background:#0c0e13;border:1px solid var(--line);border-radius:11px;padding:16px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.75;
+    color:#d6dbe6;white-space:pre-wrap;word-break:break-word;max-height:600px;overflow-y:auto}
+  .more-link{margin-top:14px;font-size:12.5px;color:var(--dim)}
+
+  .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);z-index:80;
+    background:var(--panel);border:1px solid var(--green);color:var(--txt);padding:11px 20px;border-radius:11px;
+    font-size:14px;font-weight:600;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:all .25s}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  .toast .dot{color:var(--green);margin-right:7px}
+
+  .why{margin-top:34px;padding:18px 20px;border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+    background:var(--panel);font-size:13px;color:var(--txt-2)}
+  .why b{color:var(--txt)}
+
+  footer{position:relative;z-index:2;border-top:1px solid var(--line);margin-top:44px;padding:26px 0 46px;color:var(--dim);font-size:13px}
+  footer a{color:var(--txt-2);text-decoration:underline}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="wrap nav-in">
+  <a class="brand" href="./">
+    <span class="mark">🎬</span>
+    <b>AI Short Film Prompts</b><span>Cinematic Prompt Library</span>
+  </a>
+  <span class="spacer"></span>
+  <a class="gh" href="./">← Library</a>
+  <a class="gh" href="../" title="中文版">中文</a>
+  <a class="gh" href="https://github.com/jnMetaCode/ai-shortfilm-prompts" target="_blank">★ GitHub</a>
+</div></nav>
+
+<header class="hero"><div class="wrap hero-in">
+  <div class="eyebrow">No install · No login · No data collected</div>
+  <h1>Pick a genre, fill 3 blanks<br><span class="g">assemble a cinematic prompt on the spot</span></h1>
+  <p class="lead">Assembled live using this library's <b>5-stage methodology</b>: core theme / character & scene / atmosphere & quality /
+    camera rules / storyboard opener. What you get is an <b>editable starter skeleton</b>, not a black box — for a full
+    multi-shot worked example, browse the <a href="./#lib">template library</a>, or install the
+    <a href="https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/skills/shortfilm-prompt/SKILL.md" target="_blank">Claude Code Skill</a> for full generation.</p>
+</header>
+
+<main class="wrap">
+  <div class="builder">
+    <div class="panel">
+      <h2>1 · Pick a genre</h2>
+      <div class="genre-grid" id="genre-grid"></div>
+
+      <label for="subject">2 · Subject / character (be specific)</label>
+      <input type="text" id="subject" placeholder="e.g. a medium yellow short-haired mongrel, one ear folds at the tip">
+      <label for="scene">3 · Scene / setting</label>
+      <input type="text" id="scene" placeholder="e.g. a modest family home's small yard, a wooden doorstep, an old window">
+      <label for="beat">4 · Key action / beat</label>
+      <input type="text" id="beat" placeholder="e.g. the puppy first nuzzles the owner's hand, tail wagging fast">
+      <label for="ambient">5 · Ambient sound (optional)</label>
+      <input type="text" id="ambient" placeholder="e.g. wind in leaves, a distant bark, a creaking wooden door">
+      <p class="hint">Blank fields get a <code>{{...}}</code> placeholder so you know what to fill in by hand after copying.</p>
+    </div>
+
+    <div class="panel">
+      <div class="out-head">
+        <h2 style="margin:0">Generated prompt</h2>
+        <button class="sbtn primary" id="copy-btn">⧉ Copy prompt</button>
+      </div>
+      <div class="out-box" id="output"></div>
+      <p class="more-link" id="more-link"></p>
+    </div>
+  </div>
+
+  <div class="why">
+    <b>Why assembled this way?</b> Three counter-intuitive rules run through every output: ① name real camera/lens
+    models instead of the vague word "cinematic"; ② actively describe imperfections (wear, stains, fatigue) — perfection
+    reads as fake; ③ leave the ending empty — no score piling on emotion, no explosion-style close.
+    Full methodology: <a href="https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/methodology.md" target="_blank">methodology.md</a>.
+  </div>
+</main>
+
+<div class="toast" id="toast"><span class="dot">✓</span><span id="toast-t">Copied</span></div>
+
+<footer><div class="wrap">
+  <p style="margin:0 0 6px">This tool runs entirely client-side — nothing you type is uploaded or logged. Methodology / data are MIT licensed;
+    source at <a href="https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/docs/en/build.html" target="_blank">build.html</a>.</p>
+  <p style="margin:0">Missing a genre? The <a href="./#lib">template library</a> has 21 full genres, and
+    <a href="https://github.com/jnMetaCode/ai-shortfilm-prompts/issues" target="_blank">issues</a> are welcome.</p>
+</div></footer>
+
+<script>
+const GENRES = [
+  {id:"pet-lifetime-narrative", ico:"🐕", label:"Pet & Family",
+   core:"warm nostalgic family film | a lifetime of companionship | time-lapse across seasons | gentle realism | no melodrama, no music-video gloss",
+   atmosphere:"ARRICAM camera with Cooke S4 vintage primes, Kodak Vision3 250D 35mm film stock. Warm golden natural light, low contrast, soft organic grain. Lock one warm grade for the whole piece — mark time only through the season outside the window and the light angle, never by changing the color tone.",
+   camera:"Edited across shots, mostly static or slow shot sizes, eye-level with the subject; one or two slow push-ins on close-ups. Each cut lands on the same spot in the scene so time reads clearly.",
+   ending:"No dialogue, no score. Close on a look, a breath, or a worn object."},
+  {id:"family-recipe-farewell", ico:"🍲", label:"Family Recipe",
+   core:"warm nostalgic family film | a recipe handed down across a lifetime | time-lapse across seasons | gentle realism | no melodrama, no music-video gloss",
+   atmosphere:"Warm-yellow kitchen natural light, Kodak Vision3 film texture, low contrast, soft grain. Lock one warm grade across the whole piece; mark time through the stove, window light, and the character's age.",
+   camera:"Multi-shot edit alternating hand close-ups and mid shots of the person; one slow push-in on the key prop (recipe card / cookware).",
+   ending:"Close on an empty chair or an untouched plate — no crying close-up, no music to force the emotion."},
+  {id:"elderly-cat-companion", ico:"🐈", label:"Grandma & Cat",
+   core:"warm nostalgic family film | an empty-nest grandmother and the stray who stays | quiet companionship across seasons | gentle realism | no melodrama, no music-video gloss",
+   atmosphere:"Soft side/back light inside an old home, warm-grey tone, light film grain. Lock one grade; mark seasons only through the view outside the window and the character's clothing.",
+   camera:"Mostly static long takes holding person and animal in silent company within frame; use push-ins sparingly.",
+   ending:"An unanswered phone, an empty bowl — no dialogue, no music stacking the emotion."},
+  {id:"animal-vlog", ico:"🐶", label:"Animal VLog",
+   core:"first-person animal vlog | handheld selfie POV | natural daylight | synced talking + ambient | charming realism, no uncanny CG fur",
+   atmosphere:"Front-camera selfie texture, natural daylight, slight wide-angle distortion. Real fur material and sheen — no over-smoothing.",
+   camera:"Handheld selfie POV throughout, occasional subtle shake for realism; talking is synced to the picture.",
+   ending:"Close on an endearing little mishap (a stumble over words / wind messing up the fur) — not a staged-perfect finish."},
+  {id:"food-asmr", ico:"🍳", label:"Food ASMR",
+   core:"food ASMR | extreme macro sensory close-up | natural window light | crisp synced foley | appetising realism, no oversaturated food-porn",
+   atmosphere:"Natural window side/back light emphasizing steam and oil sheen. Real food texture and imperfection — charred edges, scattered crumbs.",
+   camera:"Extreme macro close-ups throughout, slow push-ins or orbits; the camera barely leaves the food.",
+   ending:"Freeze on the bite or the scoop — sound is the lead; no music should cover the foley."},
+  {id:"product-commercial", ico:"📦", label:"Product Ad",
+   core:"premium product commercial | macro tactile realism | controlled hard key + soft fill | beat-synced reveal | no plastic CG gloss, no floating-in-void render",
+   atmosphere:"Hard key + soft fill studio commercial look; real material reflections and shadow falloff, avoid blown-out highlights.",
+   camera:"Beat-driven multi-shot reveal: light sweep → detail close-up → full reveal, each cut landing on a feature.",
+   ending:"Freeze on one real moment of use — not a floating render-style close."},
+  {id:"cyberpunk-city", ico:"🌃", label:"Cyberpunk City",
+   core:"neon cyberpunk metropolis | rain-soaked night roam | volumetric haze | low-saturation teal base + neon accents | atmospheric realism, no game-CG city, no clean render",
+   atmosphere:"Hollywood teal-and-orange contrast, cold orange-grey and dark cyan for oppression; high-intensity neon orange/blue scattering through dense fog. Sony Venice camera with Canon K-35 lenses, handheld throughout.",
+   camera:"Long roaming takes, slow lateral moves or tracking shots that let the environment be the lead; cut sparingly.",
+   ending:"An empty shot, rain hitting a neon sign — not a hero close-up on the character."},
+  {id:"sci-fi-space", ico:"🚀", label:"Sci-Fi Space",
+   core:"hard sci-fi space | zero-gravity physics | vast scale | controlled vacuum silence | photoreal NASA-footage realism, no game-cutscene look",
+   atmosphere:"Simulated IMAX camera with Panavision lenses, 24fps simulated motion blur. Low-saturation Hollywood teal-orange, shadows compressed but detailed.",
+   camera:"Static wide shots establish scale, paired with slow zero-gravity drift; exterior shots are dead silent except breathing/comms static.",
+   ending:"A tiny figure adrift against the vastness — no explosion, no score stacking emotion."},
+  {id:"micro-drama", ico:"🎭", label:"Micro-Drama",
+   core:"vertical micro-drama | dialogue confrontation | hook-heavy cold open | shot-reverse-shot | grounded performance, no soap-opera overacting",
+   atmosphere:"9:16 vertical framing, faces filling more of the frame, hard light punctuating the emotional turn.",
+   camera:"A 2-second cold-open hook straight into the conflict; shot-reverse-shot dialogue, cutting to reactions on key lines.",
+   ending:"Freeze on an unresolved expression or gesture — don't give the answer."},
+  {id:"movie-trailer", ico:"🎟️", label:"Movie Trailer",
+   core:"cinematic teaser trailer | escalating multi-shot montage | one locked filmic grade | sound-design driven | restrained reveal, no cheesy voiceover, no rapid strobe cuts",
+   atmosphere:"One locked filmic grade across the whole piece; pace driven by sound design (low drums / silence / hard stops), not melody.",
+   camera:"Escalating multi-shot montage, shots getting shorter to build acceleration; ends on a hard cut to black + title card.",
+   ending:"Cut to black, title fades in — no voiceover, no explanatory lines."},
+  {id:"car-commercial", ico:"🚗", label:"Car Commercial",
+   core:"automotive commercial | reflective surfaces in motion | speed and form beauty | a moving light sweep reveal | photoreal, no plastic CG car, no floating-in-void render",
+   atmosphere:"A moving light sweep reveals the body lines; real environment reflections (clouds, streetlights, tree shadows) on the paint.",
+   camera:"Low tracking shots combined with crane moves emphasizing speed and mass; avoid a floating render-style void background.",
+   ending:"Freeze on one detail reflection in a headlight or badge — not a 360°-showcase close."},
+  {id:"music-video", ico:"🎵", label:"Music Video",
+   core:"music video | beat-synced multi-shot | one bold grade | performance energy | no karaoke literalism, no random unmotivated cuts",
+   atmosphere:"One bold saturated grade throughout, hard light carving silhouettes to reinforce performance energy.",
+   camera:"Beat-synced cuts landing on the drum hits; edit speed visibly increases into the chorus/hook.",
+   ending:"Close on a frozen performance beat or a cross-dissolve — not an abrupt cut to black."},
+  {id:"dance", ico:"💃", label:"Dance Film",
+   core:"dance film | full-body continuous motion | body synced to rhythm | one bold grade | real physical motion, no stiff mocap look, no choppy cuts",
+   atmosphere:"One bold grade throughout, hard light carving body lines and muscle definition, avoid over-smoothing.",
+   camera:"Keep the full body in frame in continuous long takes as much as possible, avoid choppy cuts breaking the body's flow; camera movement itself rides the beat.",
+   ending:"Freeze on the moment of peak physical tension — not a fade-out."},
+  {id:"found-footage-horror", ico:"📹", label:"Found-Footage Horror", noBreath:true,
+   core:"found-footage horror | fixed security-cam angle | night-vision / grain mode | dread through stillness | no jumpscare gore, no cinematic polish",
+   atmosphere:"Fixed security-cam quality — timestamp burn-in, noise, occasional signal drop; green/IR grain in night-vision mode.",
+   camera:"Completely fixed framing, never move the camera; dread comes from a barely perceptible change in frame, not camera movement.",
+   ending:"End on signal loss or a timestamp jump — never show a clear payoff of 'what was seen.'"},
+];
+
+let curGenre = GENRES[0];
+const grid = document.getElementById('genre-grid');
+grid.innerHTML = GENRES.map(g=>
+  `<div class="g-chip ${g.id===curGenre.id?'active':''}" data-id="${g.id}">
+     <span class="ico">${g.ico}</span><span>${g.label}</span>
+   </div>`).join('');
+grid.querySelectorAll('.g-chip').forEach(el=>el.onclick=()=>{
+  curGenre = GENRES.find(g=>g.id===el.dataset.id);
+  grid.querySelectorAll('.g-chip').forEach(x=>x.classList.toggle('active', x===el));
+  render();
+});
+
+const $ = id => document.getElementById(id);
+['subject','scene','beat','ambient'].forEach(id => $(id).oninput = render);
+
+function ph(v, fallback){ return v && v.trim() ? v.trim() : fallback; }
+
+function render(){
+  const subject = ph($('subject').value, "{{specific description of the subject/character}}");
+  const scene = ph($('scene').value, "{{scene/setting description}}");
+  const beat = ph($('beat').value, "{{key action / beat}}");
+  const ambient = ph($('ambient').value, "{{fill in ambient sound for the scene}}");
+  const g = curGenre;
+
+  const out = `1 · Core theme
+${g.core}
+
+2 · Character & scene
+Subject: ${subject}
+Scene: ${scene}
+Imperfections: keep at least 2 flaws (wear, stains, fatigue, asymmetry) — resist over-beautifying.
+
+3 · Atmosphere & quality
+${g.atmosphere}
+
+4 · Camera rules
+${g.camera}
+${g.noBreath ? '' : 'Handheld shot. Throughout, maintain an extremely subtle, breath-like camera float to enhance presence.\n'}Sound: No score. Production audio only — ${ambient}.
+
+5 · Storyboard (opener)
+${beat}
+
+Ending (restrained): ${g.ending}`;
+
+  $('output').textContent = out;
+  $('more-link').innerHTML = `Want the full multi-shot example? → <a href="../p/${g.id}.html" target="_blank">${g.label} template</a>`;
+}
+
+document.getElementById('copy-btn').onclick = async () => {
+  await navigator.clipboard.writeText($('output').textContent);
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  clearTimeout(t._t); t._t = setTimeout(()=>t.classList.remove('show'), 1800);
+};
+
+render();
+</script>
+</body>
+</html>

@@ -366,7 +366,9 @@ def write_index(meta):
 
 def write_sitemap(pages):
     urls = [f"  <url><loc>{SITE}/</loc><lastmod>{BUILD_DATE}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>",
+            f"  <url><loc>{SITE}/build.html</loc><lastmod>{BUILD_DATE}</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>",
             f"  <url><loc>{SITE}/en/</loc><lastmod>{BUILD_DATE}</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>",
+            f"  <url><loc>{SITE}/en/build.html</loc><lastmod>{BUILD_DATE}</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>",
             f"  <url><loc>{SITE}/p/</loc><lastmod>{BUILD_DATE}</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>"]
     for slug in pages:
         urls.append(f"  <url><loc>{SITE}/p/{slug}</loc><lastmod>{BUILD_DATE}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>")

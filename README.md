@@ -1,6 +1,7 @@
 # ai-shortfilm-prompts
 
 > 🌐 **Browse the prompt library online → [prompts.aiolaola.com](https://prompts.aiolaola.com)** — view any template/case and copy it with one click, no install.
+> 🧩 **Or skip straight to the [prompt builder](https://prompts.aiolaola.com/en/build.html)** — pick a genre, fill 3 blanks, get a ready-to-paste prompt. No Claude Code needed.
 
 > 📖 **免费配套学习** → [从零学会 AI 编程](https://aiolaola.com/?utm_source=github&utm_campaign=shortfilm)：180 节免费实操课 + 《AI 编程实战三卷书》在线阅读 + 实战社区 · 永久免费
 
@@ -23,9 +24,11 @@
 [![X Post](https://img.shields.io/badge/read_the_thread-@aibuzhiyu-1DA1F2?logo=x)](https://x.com/aibuzhiyu/status/2056426660577288645)
 [![Plugin](https://img.shields.io/badge/Claude_Code-plugin_install-blueviolet)](#install-claude-code)
 
-> The complete methodology + prompt library + Claude Code Skill behind
+> **A Claude Code Skill that turns any idea into a cinematic, model-ready
+> video prompt** — for Sora · Kling · Veo · Seedance. 21 genre templates,
+> a 5-stage structure, eval-tested. Distilled from
 > **[*Zombie Scavenger*](https://x.com/aibuzhiyu/status/2056426660577288645)**
-> by Mx-Shell — the AI short that Hollywood director PJ Ace called
+> by Mx-Shell — the AI short Hollywood director PJ Ace called
 > *"one of the best short films I've seen in years."*
 
 **[中文版 →](./README.zh.md)**
