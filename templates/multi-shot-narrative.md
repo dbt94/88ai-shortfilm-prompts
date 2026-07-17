@@ -7,6 +7,11 @@
 > Best for: edit-style shorts where an event is broken into N shots,
 > each 5–8 seconds, then assembled into a coherent narrative.
 >
+> **Before you generate Shot 1**, fill out
+> [project-planner.md](./project-planner.md) — the subject registry +
+> atmosphere lock there is what keeps a face/color/motion from drifting
+> by shot 3–4, which is the #1 way these pieces fail.
+>
 > **[中文版 →](./multi-shot-narrative.zh.md)**
 
 ---

@@ -18,5 +18,33 @@
   {
     "id": "emotional-pet-farewell",
     "input": "我想做一个催泪的萌宠亲情短片：一只狗从小奶狗陪伴一个孩子长大，直到狗老去。多分镜叙事，要克制不煽情。"
+  },
+  {
+    "id": "product-commercial-reveal",
+    "input": "Write a beat-driven product commercial prompt: a wristwatch reveal, macro shots of the metal band and dial, ending on the full product hero shot. Premium, tactile, no floating-in-void CG look."
+  },
+  {
+    "id": "found-footage-fixed-cam",
+    "input": "Write a found-footage horror prompt: a fixed security camera watching an empty office hallway at night, something changes very slightly between frames. No jumpscare gore."
+  },
+  {
+    "id": "claymation-stepped",
+    "input": "I want a stop-motion claymation prompt, 12fps stepped animation, a small clay fox character walking through a handmade forest set. Tactile, imperfect, no smooth CG motion."
+  },
+  {
+    "id": "music-video-performance",
+    "input": "Write a music video prompt: a singer performing on a rooftop at sunset, beat-synced multi-shot cuts, bold single color grade. The track's beat should drive the edit."
+  },
+  {
+    "id": "micro-drama-vertical",
+    "input": "竖屏短剧提示词：两人在餐厅对峙，一句台词后镜头切给对方的反应，2 秒内要有冷开场钩子，结尾留悬念。"
+  },
+  {
+    "id": "sci-fi-space-zero-g",
+    "input": "Hard sci-fi prompt: an astronaut drifts in zero gravity outside a damaged space station, vast scale, vacuum silence, no game-cutscene look."
+  },
+  {
+    "id": "cyberpunk-city-roam",
+    "input": "Write an atmospheric cyberpunk city prompt — a rain-soaked neon metropolis at night, no clear protagonist, the city itself is the subject. Volumetric haze, teal-and-orange grade."
   }
 ]

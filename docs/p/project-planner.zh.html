@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>多分镜项目规划表 —— 在生成第 1 镜之前先锁定一致性｜电影感 AI 视频提示词库</title>
+<meta name="description" content="jnMetaCode 原创实战表格（MIT）。多镜头作品翻车，往往不是某一镜画面差， 而是主体在镜头之间悄悄变了——伤疤位置换了、Portrait 编号乱了、 运动方向和上一镜接不上。这些坑 multi-shot-narrative.zh.md 的 Debugging tips 和 Skill 的情感叙…">
+<link rel="canonical" href="https://prompts.aiolaola.com/p/project-planner.zh">
+<meta name="robots" content="index, follow">
+<link rel="alternate" hreflang="zh-CN" href="https://prompts.aiolaola.com/p/project-planner.zh">
+<link rel="alternate" hreflang="en" href="https://prompts.aiolaola.com/p/project-planner">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="电影感 AI 视频提示词库">
+<meta property="og:title" content="多分镜项目规划表 —— 在生成第 1 镜之前先锁定一致性">
+<meta property="og:description" content="jnMetaCode 原创实战表格（MIT）。多镜头作品翻车，往往不是某一镜画面差， 而是主体在镜头之间悄悄变了——伤疤位置换了、Portrait 编号乱了、 运动方向和上一镜接不上。这些坑 multi-shot-narrative.zh.md 的 Debugging tips 和 Skill 的情感叙…">
+<meta property="og:url" content="https://prompts.aiolaola.com/p/project-planner.zh">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="多分镜项目规划表 —— 在生成第 1 镜之前先锁定一致性">
+<meta name="twitter:description" content="jnMetaCode 原创实战表格（MIT）。多镜头作品翻车，往往不是某一镜画面差， 而是主体在镜头之间悄悄变了——伤疤位置换了、Portrait 编号乱了、 运动方向和上一镜接不上。这些坑 multi-shot-narrative.zh.md 的 Debugging tips 和 Skill 的情感叙…">
+<link rel="stylesheet" href="./page.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "多分镜项目规划表 —— 在生成第 1 镜之前先锁定一致性",
+  "description": "jnMetaCode 原创实战表格（MIT）。多镜头作品翻车，往往不是某一镜画面差， 而是主体在镜头之间悄悄变了——伤疤位置换了、Portrait 编号乱了、 运动方向和上一镜接不上。这些坑 multi-shot-narrative.zh.md 的 Debugging tips 和 Skill 的情感叙…",
+  "inLanguage": "zh-CN",
+  "url": "https://prompts.aiolaola.com/p/project-planner.zh",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "电影感 AI 视频提示词库",
+    "url": "https://prompts.aiolaola.com/"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "jnMetaCode",
+    "url": "https://github.com/jnMetaCode"
+  },
+  "license": "https://opensource.org/licenses/MIT"
+}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7LBJRDWYYW"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7LBJRDWYYW');</script>
+</head>
+<body>
+<header class="topbar">
+  <a class="back" href="../">← 提示词库</a>
+  <a class="ghlink" href="https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/project-planner.zh.md" target="_blank" rel="noopener">在 GitHub 查看源文件 ↗</a>
+</header>
+<main class="doc">
+  <div class="doc-actions">
+    <button id="copyPrompt">⧉ 复制提示词</button>
+    <button id="copyAll">复制全文</button>
+    <a class="langsw" href="./project-planner.html">EN</a>
+  </div>
+  <article class="md">
+<h1>多分镜项目规划表 —— 在生成第 1 镜之前先锁定一致性</h1>
+<blockquote><p>jnMetaCode 原创实战表格（MIT）。多镜头作品翻车，往往不是某一镜画面差， 而是<strong>主体在镜头之间悄悄变了</strong>——伤疤位置换了、Portrait 编号乱了、 运动方向和上一镜接不上。这些坑 <a href="multi-shot-narrative.zh.html">multi-shot-narrative.zh.md</a> 的 Debugging tips 和 Skill 的情感叙事规则里都提过——但都只是"读到才有用" 的一句提醒。这份表格把提醒变成开工前必须先填的表格。</p>
+<p><strong>怎么用</strong>：把这份文件（或表格部分）复制进你的项目笔记，在写第一条 分镜提示词<strong>之前</strong>填完。生成过程中每加一镜就回来对照一次，不是开工时 填一次就完事。</p>
+<p><strong><a href="project-planner.html">English →</a></strong></p></blockquote>
+<hr>
+<h2>0 · 这份表格适合你吗？</h2>
+<p>单镜头作品（15 秒变身、纯氛围空镜）不需要——没有跨镜一致性要考虑。 <strong>3 镜以上的剪辑型作品</strong>都用得上：多分镜叙事、情感/萌宠/亲情类、电影 预告片、竖屏短剧、MV。</p>
+<hr>
+<h2>1 · 主体登记表（生成第 1 镜前填）</h2>
+<p>每个跨镜头出现的主体一行。这张表<strong>就是</strong>一致性锁——每一镜的"人物与 场景"段落都必须照抄这里的措辞，不是每次重新概括一遍。</p>
+<table><thead><tr><th>Portrait 编号</th><th>角色</th><th>脸部/特征（"100% 保留"的具体措辞）</th><th>服装/道具（材质优先）</th><th>≥2 处瑕疵锚点（每镜必须复现）</th></tr></thead><tbody><tr><td>Portrait1</td><td>例：主角</td><td></td><td></td><td></td></tr><tr><td>Portrait2</td><td>例：同伴/动物</td><td></td><td></td><td></td></tr><tr><td>Portrait3</td><td>例：场景参考</td><td></td><td></td><td></td></tr></tbody></table>
+<p><strong>规则</strong>：Portrait 编号全片固定。Portrait1 每一镜都是同一个角色—— 中途绝不重新编号或互换（见 <code>multi-shot-narrative.zh.md</code> Debugging tip #4）。</p>
+<p><strong>技巧</strong>：先生成<strong>第一镜和最后一镜</strong>锁定长相，再补中间（ <code>pet-lifetime-narrative.zh.md</code>、<code>family-recipe-farewell.zh.md</code> 都是 这么做的）——在第 1/2 镜就发现脸跑偏，比第 5/7 镜才发现便宜得多。</p>
+<hr>
+<h2>2 · 氛围锁定块（全片必须逐字一致）</h2>
+<p>只填一次。把同一段措辞粘贴进每一镜的第 3 段——不要每镜重新组织一遍 说法，那是剪辑型作品色调断裂的头号原因。</p>
+<pre><code>核心主题标签：{{3-6 个标签，| 分隔}}
+机身+镜头组合：{{例：Sony Venice + Canon K-35 / IMAX + Panavision C-series}}
+色彩与影调：{{锁定一种描述——写一次，逐字复制}}
+颗粒/风格核心：{{}}</code></pre>
+<p><strong>规则</strong>：如果你发现自己在给第 4 镜写一句"稍微不一样"的色调描述， 停——这正是剪辑型作品在后期崩色调的元凶。回去把第 2 节的措辞逐字 粘贴过来。</p>
+<hr>
+<h2>3 · 分镜表（边规划边填，边生成边核对）</h2>
+<p>"出场方向"和下一行的"入场方向"必须对上——运动方向接得上，观众才会 把切点读成一个连续动作（<code>multi-shot-narrative.zh.md</code> Debugging tip #2）。</p>
+<table><thead><tr><th>镜号</th><th>景别/构图</th><th>运镜</th><th>内容（主体做了什么 → 发生了什么）</th><th>出场方向/状态</th><th>下一镜入场（须对应）</th></tr></thead><tbody><tr><td>1</td><td></td><td></td><td></td><td>例：从画面右侧出画</td><td>—</td></tr><tr><td>2</td><td></td><td></td><td></td><td></td><td>须从画面右侧入画 ✓/✗</td></tr><tr><td>3</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>…</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+<p><strong>经验值</strong>：剪辑型作品 3-8 镜；每镜单独生成 5-10 秒，后期拼接（不要 尝试一镜 30 秒以上——超过约 15 秒重投成功率会崩，见 <code>cheatsheet.zh.md</code>）。</p>
+<hr>
+<h2>4 · 开工前自查清单（生成第 1 镜之前）</h2>
+<ul><li>[ ] 每个跨镜出现的主体都有第 1 节的登记行，且有 ≥2 处瑕疵锚点</li><li>[ ] 第 2 节的氛围措辞已经定稿——之后是逐字粘贴，不是每镜重写</li><li>[ ] 分镜表已草拟，出场/入场方向逐行核对过是否接得上</li><li>[ ] 对重投次数有现实预期——见 <a href="cheatsheet.zh.html">cheatsheet.zh.md</a> 「重投与预算」一节（业内经验：最终镜头数的 5-10 倍生成量）</li><li>[ ] 清楚<strong>先生成哪一镜</strong>来锁定长相（通常是第 1 镜，有时是第 1 镜+最后一镜）</li></ul>
+<p>不满勾选 = 大概率在第 3-4 镜就开始跑偏。先把空缺补上再动手。</p>
+<hr>
+<h2>另见</h2>
+<ul><li><a href="multi-shot-narrative.zh.html">multi-shot-narrative.zh.md</a> —— 这份表格填完之后要接的分镜骨架+词汇表</li><li><a href="genre-camera-sop.zh.html">genre-camera-sop.zh.md</a> —— 分镜表草拟完后，按题材查运镜措辞</li><li><a href="cases.zh.html">cases.zh.md</a> 第 3 节「运动与时长」—— 如果已经在项目中途发现跑偏，这里有修复方法</li></ul>
+  </article>
+  <footer class="doc-foot">
+    <p>许可 · <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">MIT · 可自由使用</a></p>
+    <p><a href="../">← 回提示词库</a> · <a href="https://www.aiolaola.com/?utm_source=prompts.aiolaola.com&amp;utm_medium=referral&amp;utm_campaign=docpage" target="_blank" rel="noopener">aiOlaOla 学 AI 编程</a></p>
+  </footer>
+</main>
+<div class="toast" id="toast"></div>
+<script>
+const RAW = "# 多分镜项目规划表 —— 在生成第 1 镜之前先锁定一致性\n\n> jnMetaCode 原创实战表格（MIT）。多镜头作品翻车，往往不是某一镜画面差，\n> 而是**主体在镜头之间悄悄变了**——伤疤位置换了、Portrait 编号乱了、\n> 运动方向和上一镜接不上。这些坑\n> [multi-shot-narrative.zh.md](./multi-shot-narrative.zh.md) 的\n> Debugging tips 和 Skill 的情感叙事规则里都提过——但都只是\"读到才有用\"\n> 的一句提醒。这份表格把提醒变成开工前必须先填的表格。\n>\n> **怎么用**：把这份文件（或表格部分）复制进你的项目笔记，在写第一条\n> 分镜提示词**之前**填完。生成过程中每加一镜就回来对照一次，不是开工时\n> 填一次就完事。\n>\n> **[English →](./project-planner.md)**\n\n---\n\n## 0 · 这份表格适合你吗？\n\n单镜头作品（15 秒变身、纯氛围空镜）不需要——没有跨镜一致性要考虑。\n**3 镜以上的剪辑型作品**都用得上：多分镜叙事、情感/萌宠/亲情类、电影\n预告片、竖屏短剧、MV。\n\n---\n\n## 1 · 主体登记表（生成第 1 镜前填）\n\n每个跨镜头出现的主体一行。这张表**就是**一致性锁——每一镜的\"人物与\n场景\"段落都必须照抄这里的措辞，不是每次重新概括一遍。\n\n| Portrait 编号 | 角色 | 脸部/特征（\"100% 保留\"的具体措辞） | 服装/道具（材质优先） | ≥2 处瑕疵锚点（每镜必须复现） |\n|---|---|---|---|---|\n| Portrait1 | 例：主角 | | | |\n| Portrait2 | 例：同伴/动物 | | | |\n| Portrait3 | 例：场景参考 | | | |\n\n**规则**：Portrait 编号全片固定。Portrait1 每一镜都是同一个角色——\n中途绝不重新编号或互换（见 `multi-shot-narrative.zh.md` Debugging\ntip #4）。\n\n**技巧**：先生成**第一镜和最后一镜**锁定长相，再补中间（\n`pet-lifetime-narrative.zh.md`、`family-recipe-farewell.zh.md` 都是\n这么做的）——在第 1/2 镜就发现脸跑偏，比第 5/7 镜才发现便宜得多。\n\n---\n\n## 2 · 氛围锁定块（全片必须逐字一致）\n\n只填一次。把同一段措辞粘贴进每一镜的第 3 段——不要每镜重新组织一遍\n说法，那是剪辑型作品色调断裂的头号原因。\n\n```\n核心主题标签：{{3-6 个标签，| 分隔}}\n机身+镜头组合：{{例：Sony Venice + Canon K-35 / IMAX + Panavision C-series}}\n色彩与影调：{{锁定一种描述——写一次，逐字复制}}\n颗粒/风格核心：{{}}\n```\n\n**规则**：如果你发现自己在给第 4 镜写一句\"稍微不一样\"的色调描述，\n停——这正是剪辑型作品在后期崩色调的元凶。回去把第 2 节的措辞逐字\n粘贴过来。\n\n---\n\n## 3 · 分镜表（边规划边填，边生成边核对）\n\n\"出场方向\"和下一行的\"入场方向\"必须对上——运动方向接得上，观众才会\n把切点读成一个连续动作（`multi-shot-narrative.zh.md` Debugging tip #2）。\n\n| 镜号 | 景别/构图 | 运镜 | 内容（主体做了什么 → 发生了什么） | 出场方向/状态 | 下一镜入场（须对应） |\n|---|---|---|---|---|---|\n| 1 | | | | 例：从画面右侧出画 | — |\n| 2 | | | | | 须从画面右侧入画 ✓/✗ |\n| 3 | | | | | |\n| … | | | | | |\n\n**经验值**：剪辑型作品 3-8 镜；每镜单独生成 5-10 秒，后期拼接（不要\n尝试一镜 30 秒以上——超过约 15 秒重投成功率会崩，见 `cheatsheet.zh.md`）。\n\n---\n\n## 4 · 开工前自查清单（生成第 1 镜之前）\n\n- [ ] 每个跨镜出现的主体都有第 1 节的登记行，且有 ≥2 处瑕疵锚点\n- [ ] 第 2 节的氛围措辞已经定稿——之后是逐字粘贴，不是每镜重写\n- [ ] 分镜表已草拟，出场/入场方向逐行核对过是否接得上\n- [ ] 对重投次数有现实预期——见 [cheatsheet.zh.md](../cheatsheet.zh.md)\n      「重投与预算」一节（业内经验：最终镜头数的 5-10 倍生成量）\n- [ ] 清楚**先生成哪一镜**来锁定长相（通常是第 1 镜，有时是第 1 镜+最后一镜）\n\n不满勾选 = 大概率在第 3-4 镜就开始跑偏。先把空缺补上再动手。\n\n---\n\n## 另见\n\n- [multi-shot-narrative.zh.md](./multi-shot-narrative.zh.md) —— 这份表格填完之后要接的分镜骨架+词汇表\n- [genre-camera-sop.zh.md](./genre-camera-sop.zh.md) —— 分镜表草拟完后，按题材查运镜措辞\n- [cases.zh.md](../cases.zh.md) 第 3 节「运动与时长」—— 如果已经在项目中途发现跑偏，这里有修复方法\n";
+function extractPrompt(md){
+  const lines=md.split("\n");
+  const re=/^#{1,4}\s.*(完整提示词|complete prompt|copy-paste|可直接复制)/i;
+  let s=-1; for(let i=0;i<lines.length;i++){if(re.test(lines[i])){s=i+1;break;}}
+  if(s>=0){let e=lines.length;for(let i=s;i<lines.length;i++){if(/^##\s/.test(lines[i])){e=i;break;}}
+    const r=lines.slice(s,e).join("\n").replace(/^\s*-{3,}\s*$/gm,"").trim();if(r)return r;}
+  const b=[...md.matchAll(/```[^\n]*\n([\s\S]*?)```/g)].map(m=>m[1].trim());
+  return b.length?b.join("\n\n"):md.trim();
+}
+function toast(t){const e=document.getElementById('toast');e.textContent=t;e.classList.add('show');
+  clearTimeout(toast._t);toast._t=setTimeout(()=>e.classList.remove('show'),1700);}
+async function cp(t,msg){try{await navigator.clipboard.writeText(t);toast(msg);}catch(e){toast('复制失败');}}
+document.getElementById('copyPrompt').onclick=()=>cp(extractPrompt(RAW),'提示词已复制 · 可直接粘进视频模型');
+document.getElementById('copyAll').onclick=()=>cp(RAW,'全文已复制');
+</script>
+</body>
+</html>
