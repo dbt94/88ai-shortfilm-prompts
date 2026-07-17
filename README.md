@@ -1,7 +1,7 @@
 # ai-shortfilm-prompts
 
 > 🌐 **Browse the prompt library online → [prompts.aiolaola.com](https://prompts.aiolaola.com)** — view any template/case and copy it with one click, no install.
-> 🧩 **Or skip straight to the [prompt builder](https://prompts.aiolaola.com/en/build.html)** — pick a genre, fill 3 blanks, get a ready-to-paste prompt. No Claude Code needed.
+> 🧩 **Or skip straight to the [prompt builder](https://prompts.aiolaola.com/en/build.html)** — pick one of 21 genres, fill a few blanks, get the full multi-shot prompt + negative prompt. No Claude Code needed.
 
 > 📖 **免费配套学习** → [从零学会 AI 编程](https://aiolaola.com/?utm_source=github&utm_campaign=shortfilm)：180 节免费实操课 + 《AI 编程实战三卷书》在线阅读 + 实战社区 · 永久免费
 

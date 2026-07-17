@@ -11,7 +11,7 @@
 <!-- aiolaola:end -->
 
 > 🌐 **在线浏览提示词库 → [prompts.aiolaola.com](https://prompts.aiolaola.com)** —— 点开即看任意模板/案例,一键复制,免安装。
-> 🧩 **或直接用 [提示词生成器](https://prompts.aiolaola.com/build.html)** —— 选题材、填三个空,现场拼出可直接投喂的提示词,不用装 Claude Code。
+> 🧩 **或直接用 [提示词生成器](https://prompts.aiolaola.com/build.html)** —— 21 题材选一个、填几个空,现场生成完整多镜提示词 + 负面提示词,不用装 Claude Code。
 
 <!-- ═══ 顶部 demo 片位 —— 出片后两步发布：
      1. 把你的 demo.mp4 拖进任意 GitHub issue/PR 评论框，复制它生成的
