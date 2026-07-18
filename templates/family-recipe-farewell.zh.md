@@ -83,7 +83,7 @@ ARRICAM 摄影机 + Cooke S4 复古定焦镜头 + 柯达 Vision3 250D 35mm 胶�
   旧菜谱卡立在看得见的地方。
 ```
 
-### 反向提示词（Seedance / 可灵 —— 粘进独立反向框）
+### 负面提示词（Seedance / 可灵 —— 粘进独立负面框）
 ```
 blurry, low resolution, soft focus, watermark, text overlay, subtitles, logo, distorted face, asymmetric eyes, extra fingers, deformed hands, melting/morphing geometry, the person changing identity or face between shots, the recipe card changing layout between shots, oversaturated colors, plastic skin, glossy CG render, video-game look, 3D cartoon, anime shading, flat even studio lighting, frame flicker, ghosting, jarring hard cuts, lifeless locked-off camera, sappy lens flare, on-screen heart symbols
 ```

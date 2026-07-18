@@ -267,7 +267,7 @@ def _extract_prompt_and_negative(md):
         if re.match(r"^##\s", lines[i]):
             end = i
             break
-        if neg_at is None and re.match(r"^###\s+.*(负面提示词|negative prompt)", lines[i], re.I):
+        if neg_at is None and re.match(r"^###\s+.*(负面提示词|反向提示词|negative prompt)", lines[i], re.I):
             neg_at = i
     seg_end = neg_at if neg_at is not None else end
 
