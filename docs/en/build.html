@@ -205,7 +205,8 @@
 <script>
 const DATA = window.BUILDER_DATA.en;
 const ATTRIB = "\n\n— prompt generated with prompts.aiolaola.com (21 genres · free · open source)";
-let cur = DATA[0];
+const initG = new URLSearchParams(location.search).get('g');
+let cur = DATA.find(g => g.id === initG) || DATA[0];
 
 const $ = id => document.getElementById(id);
 const grid = $('genre-grid'), form = $('var-form');
@@ -218,7 +219,7 @@ function renderChips(){
     const ico = document.createElement('span'); ico.className = 'ico'; ico.textContent = g.ico;
     const lb = document.createElement('span'); lb.textContent = g.label;
     el.append(ico, lb);
-    el.onclick = () => { cur = g; renderChips(); renderForm(); render(); };
+    el.onclick = () => { cur = g; history.replaceState(null, '', '?g=' + g.id); renderChips(); renderForm(); render(); };
     grid.appendChild(el);
   }
 }

@@ -36,6 +36,13 @@
 > ⚡ **Quick start:** [one-page cheat sheet](./cheatsheet.md) ·
 > [failure→fix gallery](./cases.md)
 
+<p align="center">
+  <a href="https://prompts.aiolaola.com/en/build.html">
+    <img src="./assets/builder-preview.png" width="760" alt="No-install prompt builder — pick one of 21 genres, fill blanks, get the full multi-shot prompt + negative prompt">
+  </a>
+  <br><sub>🧩 The no-install <a href="https://prompts.aiolaola.com/en/build.html">prompt builder</a> — 21 genres · full multi-shot output · negative prompt included · runs entirely in your browser</sub>
+</p>
+
 ---
 
 ## 🎬 The tweet that started it all

@@ -39,6 +39,13 @@
 > ⚡ **快速上手：** [一页速查表](./cheatsheet.zh.md) ·
 > [翻车→修正案例集](./cases.zh.md)
 
+<p align="center">
+  <a href="https://prompts.aiolaola.com/build.html">
+    <img src="./assets/builder-preview.png" width="760" alt="免装提示词生成器 — 21 题材选题填空,输出完整多镜提示词+负面提示词">
+  </a>
+  <br><sub>🧩 <a href="https://prompts.aiolaola.com/build.html">免装提示词生成器</a> — 21 题材 · 填空出完整多镜提示词 · 负面词一键复制 · 纯前端不留数据</sub>
+</p>
+
 ---
 
 ## 🎬 PJ Ace 那条引爆的推文
