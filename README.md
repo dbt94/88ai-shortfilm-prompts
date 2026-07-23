@@ -3,7 +3,8 @@
 > 🌐 **Browse the prompt library online → [prompts.aiolaola.com](https://prompts.aiolaola.com)** — view any template/case and copy it with one click, no install.
 > 🧩 **Or skip straight to the [prompt builder](https://prompts.aiolaola.com/en/build.html)** — pick one of 21 genres, fill a few blanks, get the full multi-shot prompt + negative prompt. No Claude Code needed.
 
-> 📖 **免费配套学习** → [从零学会 AI 编程](https://aiolaola.com/?utm_source=github&utm_campaign=shortfilm)：180 节免费实操课 + 《AI 编程实战三卷书》在线阅读 + 实战社区 · 永久免费
+> 📖 **免费配套学习** → [从零学会 AI 编程](https://aiolaola.com/?utm_source=github&utm_campaign=shortfilm)（180 节）＋ [从零构建 AI 智能体](https://aiolaola.com/course/ai-agent?utm_source=github&utm_campaign=shortfilm)（40 节）
+> 🌍 Free companion courses in [English](https://aiolaola.com/en?utm_source=github&utm_campaign=shortfilm) · [日本語](https://aiolaola.com/ja?utm_source=github&utm_campaign=shortfilm) · [Español](https://aiolaola.com/es?utm_source=github&utm_campaign=shortfilm) · [한국어](https://aiolaola.com/ko?utm_source=github&utm_campaign=shortfilm) · [繁體中文](https://aiolaola.com/zh-Hant?utm_source=github&utm_campaign=shortfilm)
 
 <!-- ═══ HERO DEMO SLOT — publish your rendered 15s clip in 2 steps:
      1. Drag your demo.mp4 into any GitHub issue/PR comment box; copy the
