@@ -1,0 +1,108 @@
+name: Upstream Sync
+
+# Hält diesen Fork täglich mit seinem Upstream (dem geforkten Original) synchron.
+#   • konfliktfrei  → wird AUTOMATISCH übernommen (deine eigenen Änderungen bleiben).
+#   • Konflikt      → es wird ein Pull Request geöffnet; NICHTS wird überschrieben.
+# Selbst-erkennend: der Upstream wird zur Laufzeit über die GitHub-API bestimmt (Repo-"parent").
+# Darum ist diese Datei für JEDEN Fork identisch — keine Konfiguration nötig.
+# Verwaltet vom Model (MasterModel.bd, skills/fork-sync). Nicht von Hand pro Repo editieren.
+
+on:
+  schedule:
+    - cron: "17 4 * * *"      # täglich ~04:17 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (volle Historie)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Upstream + Branches bestimmen
+        id: cfg
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          REPO='${{ github.repository }}'
+          UP=$(gh api "repos/$REPO" --jq '.parent.clone_url // empty')
+          if [ -z "$UP" ]; then
+            echo "Kein 'parent' — Repo ist kein Fork. Nichts zu tun."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          {
+            echo "skip=false"
+            echo "upstream=$UP"
+            echo "upstream_branch=$(gh api "repos/$REPO" --jq '.parent.default_branch')"
+            echo "fork_branch=$(gh api "repos/$REPO" --jq '.default_branch')"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Git-Identität
+        if: steps.cfg.outputs.skip == 'false'
+        run: |
+          git config user.name  "fork-sync[bot]"
+          git config user.email "fork-sync@users.noreply.github.com"
+
+      - name: Upstream holen
+        if: steps.cfg.outputs.skip == 'false'
+        run: |
+          git remote add upstream "${{ steps.cfg.outputs.upstream }}" 2>/dev/null \
+            || git remote set-url upstream "${{ steps.cfg.outputs.upstream }}"
+          git fetch upstream "${{ steps.cfg.outputs.upstream_branch }}"
+
+      - name: Konfliktfrei mergen?
+        if: steps.cfg.outputs.skip == 'false'
+        id: merge
+        run: |
+          set +e
+          git checkout "${{ steps.cfg.outputs.fork_branch }}"
+          git merge --no-edit "upstream/${{ steps.cfg.outputs.upstream_branch }}"
+          if [ $? -ne 0 ]; then
+            git merge --abort 2>/dev/null
+            echo "result=conflict" >> "$GITHUB_OUTPUT"
+          else
+            echo "result=clean" >> "$GITHUB_OUTPUT"
+          fi
+          exit 0
+
+      - name: Übernehmen (konfliktfrei → push)
+        if: steps.cfg.outputs.skip == 'false' && steps.merge.outputs.result == 'clean'
+        run: |
+          set -euo pipefail
+          # GitHub-Regel: der eingebaute GITHUB_TOKEN darf .github/workflows/ NICHT pushen.
+          # Darum Upstream-Workflow-Änderungen verwerfen und die EIGENEN Workflow-Dateien behalten
+          # (inkl. dieser Datei); der restliche Upstream-Code wird übernommen. Für vollen
+          # Workflow-Sync bräuchte es einen PAT mit 'workflow'-Scope als Secret.
+          if ! git diff --quiet 'HEAD^' HEAD -- .github/workflows; then
+            git rm -r --quiet --ignore-unmatch .github/workflows >/dev/null
+            git checkout 'HEAD^' -- .github/workflows 2>/dev/null || true
+            git commit -q -m "sync: eigene .github/workflows behalten (GITHUB_TOKEN-Limit)"
+          fi
+          git push origin HEAD
+
+      - name: Pull Request (bei Konflikt)
+        if: steps.cfg.outputs.skip == 'false' && steps.merge.outputs.result == 'conflict'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          DEF='${{ steps.cfg.outputs.fork_branch }}'
+          UPB='${{ steps.cfg.outputs.upstream_branch }}'
+          BR="sync/upstream"
+          git checkout -B "$BR" "upstream/$UPB"
+          git push -f origin "$BR"
+          if [ "$(gh pr list --head "$BR" --state open --json number --jq 'length')" = "0" ]; then
+            gh pr create --base "$DEF" --head "$BR" \
+              --title "Upstream-Sync (Konflikt) $(date +%Y-%m-%d)" \
+              --body "Der automatische tägliche Upstream-Sync hatte Merge-Konflikte gegen \`$DEF\`. Bitte hier auflösen — deine eigenen Änderungen bleiben erhalten."
+          else
+            echo "Offener Sync-PR existiert bereits — aktualisiert."
+          fi
