@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7LBJRDWYYW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7LBJRDWYYW');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prompt Builder · 21 genres, fill blanks, full multi-shot prompt | AI Short Film Prompts</title>
+<meta name="description" content="Pick a genre, fill a few blanks, and generate a complete multi-shot cinematic prompt (negative prompt included) ready to paste into Seedance / Kling / Sora / Veo. 21 genres, same source as the template library. No install, no login, no data collected.">
+<meta name="keywords" content="ai video prompt generator, ai video prompt builder, sora prompt generator, cinematic prompt builder, video prompt tool">
+<link rel="canonical" href="https://prompts.aiolaola.com/en/build.html">
+<meta name="robots" content="index, follow">
+<link rel="alternate" hreflang="en" href="https://prompts.aiolaola.com/en/build.html">
+<link rel="alternate" hreflang="zh-CN" href="https://prompts.aiolaola.com/build.html">
+<link rel="alternate" hreflang="x-default" href="https://prompts.aiolaola.com/build.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Prompt Builder · 21 genres, fill blanks, full multi-shot prompt">
+<meta property="og:description" content="Pick a genre, fill a few blanks, generate a complete multi-shot cinematic prompt (negative prompt included) for Seedance/Kling/Sora/Veo. No install.">
+<meta property="og:url" content="https://prompts.aiolaola.com/en/build.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://prompts.aiolaola.com/assets/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Prompt Builder · 21 genres, fill blanks, full multi-shot prompt">
+<meta name="twitter:image" content="https://prompts.aiolaola.com/assets/og-cover.png">
+<style>
+  :root{
+    --bg:#0a0b0e; --bg-soft:#0e1014; --panel:#14171d; --panel-2:#1b1f27;
+    --line:#272c36; --line-soft:#1d222b;
+    --txt:#eceef3; --txt-2:#aab2c0; --dim:#7b8494;
+    --gold:#e8b84b; --gold-soft:#f2d488; --blue:#6aa8ff; --green:#5fd08a;
+    --radius:15px; --radius-sm:10px;
+    --shadow:0 10px 40px -12px rgba(0,0,0,.7);
+    --glow:0 0 0 1px rgba(232,184,75,.35), 0 14px 40px -14px rgba(232,184,75,.25);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+    line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.035;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+  ::selection{background:rgba(232,184,75,.28)}
+
+  .nav{position:sticky;top:0;z-index:30;backdrop-filter:saturate(140%) blur(12px);
+    background:rgba(10,11,14,.78);border-bottom:1px solid var(--line-soft)}
+  .nav-in{display:flex;align-items:center;gap:16px;height:60px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.3px;white-space:nowrap}
+  .brand .mark{width:26px;height:26px;border-radius:7px;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--gold),#c9912b);color:#1a1505;font-size:15px;box-shadow:0 2px 10px rgba(232,184,75,.4)}
+  .brand b{font-size:15px}
+  .brand span{color:var(--dim);font-size:11px;font-weight:500}
+  .nav .spacer{flex:1}
+  .nav .gh{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:9px;font-size:13px;
+    font-weight:600;border:1px solid var(--line);color:var(--txt);white-space:nowrap}
+  .nav .gh:hover{border-color:var(--gold);text-decoration:none}
+  @media(max-width:680px){.brand span{display:none}}
+
+  .hero{position:relative;padding:54px 0 30px;overflow:hidden;
+    background:radial-gradient(1100px 420px at 18% -160px,rgba(232,184,75,.13),transparent 60%)}
+  .hero-in{position:relative;z-index:2}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;
+    color:var(--gold);font-weight:600;border:1px solid rgba(232,184,75,.3);border-radius:999px;padding:5px 13px;
+    background:rgba(232,184,75,.06);margin-bottom:18px}
+  .hero h1{font-size:clamp(26px,4.6vw,42px);line-height:1.16;margin:0 0 12px;letter-spacing:.3px;font-weight:800}
+  .hero h1 .g{background:linear-gradient(100deg,var(--gold),var(--gold-soft) 60%,#fff);
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p.lead{font-size:clamp(14px,2vw,16.5px);color:var(--txt-2);max-width:680px;margin:0}
+  .hero p.lead b{color:var(--txt)}
+
+  main{position:relative;z-index:2;padding-bottom:60px}
+  .builder{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start;margin-top:30px}
+  @media(max-width:900px){.builder{grid-template-columns:1fr}}
+
+  .panel{background:linear-gradient(180deg,var(--panel),#11141a);border:1px solid var(--line);
+    border-radius:var(--radius);padding:22px}
+  .panel h2{font-size:14px;margin:0 0 14px;color:var(--dim);letter-spacing:.6px;text-transform:uppercase;font-weight:700}
+
+  .genre-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-bottom:20px}
+  .g-chip{display:flex;align-items:center;gap:7px;padding:9px 11px;border-radius:10px;border:1px solid var(--line);
+    background:var(--panel-2);color:var(--txt-2);font-size:13px;cursor:pointer;user-select:none;transition:all .14s}
+  .g-chip:hover{border-color:var(--dim);color:var(--txt)}
+  .g-chip.active{border-color:var(--gold);background:rgba(232,184,75,.1);color:var(--gold-soft);font-weight:600}
+  .g-chip .ico{font-size:15px}
+
+  label{display:block;font-size:12.5px;color:var(--dim);margin:14px 0 6px;font-weight:600}
+  label code{color:var(--gold-soft);font-family:ui-monospace,Menlo,monospace;font-size:11.5px}
+  input[type=text],textarea{width:100%;padding:10px 12px;border-radius:9px;border:1px solid var(--line);
+    background:var(--bg-soft);color:var(--txt);font-size:13.5px;font-family:inherit;resize:vertical}
+  input[type=text]:focus,textarea:focus{outline:none;border-color:var(--gold)}
+  .hint{font-size:11.5px;color:var(--dim);margin-top:4px}
+  .narrative-note{margin-top:6px;padding:13px 15px;border:1px dashed rgba(232,184,75,.35);border-radius:var(--radius-sm);
+    background:rgba(232,184,75,.05);font-size:13px;color:var(--txt-2);line-height:1.7}
+  .narrative-note b{color:var(--gold-soft)}
+
+  .out-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+  .out-head h2{margin:0;flex:1}
+  .sbtn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:9px;border:1px solid var(--line);
+    background:var(--panel-2);color:var(--txt);font-size:13px;cursor:pointer;font-weight:600;transition:all .14s;white-space:nowrap}
+  .sbtn:hover{border-color:var(--gold);color:var(--gold)}
+  .sbtn.primary{background:linear-gradient(135deg,var(--gold),#d9a23a);color:#1a1505;border-color:transparent}
+  .sbtn.primary:hover{color:#1a1505;filter:brightness(1.05)}
+  .sbtn.mini{padding:5px 11px;font-size:12px}
+  .out-box{background:#0c0e13;border:1px solid var(--line);border-radius:11px;padding:16px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.75;
+    color:#d6dbe6;white-space:pre-wrap;word-break:break-word;max-height:560px;overflow-y:auto}
+  .neg-head{display:flex;align-items:center;gap:10px;margin:18px 0 10px}
+  .neg-head h3{margin:0;flex:1;font-size:13px;color:var(--dim);letter-spacing:.5px;text-transform:uppercase;font-weight:700}
+  .neg-box{background:#120d0d;border:1px solid #3a2a2a;border-radius:11px;padding:13px 15px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;line-height:1.7;
+    color:#c9a9a9;white-space:pre-wrap;word-break:break-word;max-height:170px;overflow-y:auto}
+  .more-link{margin-top:14px;font-size:12.5px;color:var(--dim)}
+
+  .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);z-index:80;
+    background:var(--panel);border:1px solid var(--green);color:var(--txt);padding:11px 20px;border-radius:11px;
+    font-size:14px;font-weight:600;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:all .25s}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  .toast .dot{color:var(--green);margin-right:7px}
+
+  .why{margin-top:34px;padding:18px 20px;border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+    background:var(--panel);font-size:13px;color:var(--txt-2)}
+  .why b{color:var(--txt)}
+
+  footer{position:relative;z-index:2;border-top:1px solid var(--line);margin-top:44px;padding:26px 0 46px;color:var(--dim);font-size:13px}
+  footer a{color:var(--txt-2);text-decoration:underline}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="wrap nav-in">
+  <a class="brand" href="./">
+    <span class="mark">🎬</span>
+    <b>AI Short Film Prompts</b><span>Cinematic Prompt Library</span>
+  </a>
+  <span class="spacer"></span>
+  <a class="gh" href="./">← Prompt library</a>
+  <a class="gh" href="../build.html">中文</a>
+  <a class="gh" href="https://github.com/jnMetaCode/ai-shortfilm-prompts" target="_blank">★ GitHub</a>
+</div></nav>
+
+<header class="hero"><div class="wrap hero-in">
+  <div class="eyebrow">No install · No login · No data collected · 21 genres</div>
+  <h1>Pick a genre, fill a few blanks<br><span class="g">get a full multi-shot cinematic prompt</span></h1>
+  <p class="lead">The output is the <b>same complete prompt as the template library</b> — core theme /
+    character &amp; scene / atmosphere / camera rules / full shot list + negative prompt, ready to paste
+    into <b>Seedance / Kling / Sora / Veo</b>.
+    Want AI to rewrite it from scratch around your idea? Install the
+    <a href="https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/skills/shortfilm-prompt/SKILL.md" target="_blank">Claude Code Skill</a>.</p>
+</header>
+
+<main class="wrap">
+  <div class="builder">
+    <div class="panel">
+      <h2>1 · Pick a genre</h2>
+      <div class="genre-grid" id="genre-grid"></div>
+      <h2 style="margin-top:22px">2 · Fill the blanks (optional)</h2>
+      <div id="var-form"></div>
+    </div>
+
+    <div class="panel">
+      <div class="out-head">
+        <h2 style="margin:0">Result · Full prompt</h2>
+        <button class="sbtn primary" id="copy-btn">⧉ Copy prompt</button>
+      </div>
+      <div class="out-box" id="output"></div>
+      <div id="neg-wrap">
+        <div class="neg-head">
+          <h3>Negative prompt (paste into the model's dedicated field)</h3>
+          <button class="sbtn mini" id="copy-neg-btn">⧉ Copy</button>
+        </div>
+        <div class="neg-box" id="neg-output"></div>
+      </div>
+      <p class="more-link" id="more-link"></p>
+    </div>
+  </div>
+
+  <div class="why">
+    <b>Why written this way?</b> Three counter-intuitive rules run through every template:
+    ① name real cameras/lenses instead of vague words like "cinematic";
+    ② describe imperfections on purpose (wear, stains, fatigue) — perfection reads as fake;
+    ③ end with restraint — no swelling score, no explosive finale.
+    Full methodology: <a href="https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/methodology.md" target="_blank">methodology.md</a>.
+  </div>
+</main>
+
+<div class="toast" id="toast"><span class="dot">✓</span><span id="toast-t">Copied</span></div>
+
+<footer><div class="wrap">
+  <p style="margin:0 0 6px">This tool runs entirely in your browser — nothing you type is uploaded or logged.
+    Methodology / data are MIT-licensed; source:
+    <a href="https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/docs/en/build.html" target="_blank">build.html</a>.</p>
+  <p style="margin:0">Missing a genre?
+    <a href="https://github.com/jnMetaCode/ai-shortfilm-prompts/issues" target="_blank">Open an issue</a>.</p>
+</div></footer>
+
+<script src="../assets/builder-data.js"></script>
+<script>
+const DATA = window.BUILDER_DATA.en;
+const ATTRIB = "\n\n— prompt generated with prompts.aiolaola.com (21 genres · free · open source)";
+const initG = new URLSearchParams(location.search).get('g');
+let cur = DATA.find(g => g.id === initG) || DATA[0];
+
+const $ = id => document.getElementById(id);
+const grid = $('genre-grid'), form = $('var-form');
+
+function renderChips(){
+  grid.textContent = '';
+  for(const g of DATA){
+    const el = document.createElement('div');
+    el.className = 'g-chip' + (g.id === cur.id ? ' active' : '');
+    const ico = document.createElement('span'); ico.className = 'ico'; ico.textContent = g.ico;
+    const lb = document.createElement('span'); lb.textContent = g.label;
+    el.append(ico, lb);
+    el.onclick = () => { cur = g; history.replaceState(null, '', '?g=' + g.id); renderChips(); renderForm(); render(); };
+    grid.appendChild(el);
+  }
+}
+
+function renderForm(){
+  form.textContent = '';
+  if(!cur.vars.length){
+    const note = document.createElement('div');
+    note.className = 'narrative-note';
+    note.innerHTML = 'This genre is a <b>fully-written narrative example</b> (a complete shot list telling ' +
+      'one story), so there are no blanks — copy the full prompt on the right and swap the character / ' +
+      'scene details for your own. Want AI to rewrite the whole thing around your idea? Use the ' +
+      '<a href="https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/skills/shortfilm-prompt/SKILL.md" target="_blank">Claude Code Skill</a>.';
+    form.appendChild(note);
+    return;
+  }
+  cur.vars.forEach((v, i) => {
+    const lab = document.createElement('label');
+    lab.htmlFor = 'var-' + v.name;
+    const code = document.createElement('code'); code.textContent = '{{' + v.name + '}}';
+    lab.append(String(i + 1) + ' · ', code);
+    const inp = document.createElement('input');
+    inp.type = 'text'; inp.id = 'var-' + v.name;
+    inp.placeholder = 'e.g. ' + v.example;
+    inp.oninput = render;
+    const hint = document.createElement('p');
+    hint.className = 'hint'; hint.textContent = 'Swap for: ' + v.alts;
+    form.append(lab, inp, hint);
+  });
+  const tip = document.createElement('p');
+  tip.className = 'hint'; tip.style.marginTop = '12px';
+  tip.textContent = 'Blanks left empty keep their {{...}} placeholder — fill them in after copying if you prefer.';
+  form.appendChild(tip);
+}
+
+function render(){
+  let p = cur.prompt;
+  for(const v of cur.vars){
+    const el = $('var-' + v.name);
+    const val = el && el.value.trim();
+    if(val) p = p.split('{{' + v.name + '}}').join(val);
+  }
+  $('output').textContent = p;
+  const hasNeg = !!cur.negative;
+  $('neg-wrap').style.display = hasNeg ? '' : 'none';
+  if(hasNeg) $('neg-output').textContent = cur.negative;
+  $('more-link').innerHTML = '';
+  const a = document.createElement('a');
+  a.href = '../p/' + cur.id + '.html'; a.target = '_blank';
+  a.textContent = cur.label + ' template (variables + design notes)';
+  $('more-link').append('Curious why the prompt is built this way? → ', a);
+}
+
+async function cp(text, msg){
+  try{ await navigator.clipboard.writeText(text); }catch(e){ toast('Copy failed'); return; }
+  toast(msg);
+}
+function toast(t){
+  const e = $('toast'); $('toast-t').textContent = t; e.classList.add('show');
+  clearTimeout(toast._t); toast._t = setTimeout(() => e.classList.remove('show'), 1800);
+}
+$('copy-btn').onclick = () => cp($('output').textContent + ATTRIB, 'Full prompt copied · paste it into your video model');
+$('copy-neg-btn').onclick = () => cp($('neg-output').textContent, 'Negative prompt copied · paste into the dedicated field');
+
+renderChips(); renderForm(); render();
+</script>
+</body>
+</html>

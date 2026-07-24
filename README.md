@@ -1,8 +1,10 @@
 # ai-shortfilm-prompts
 
 > 🌐 **Browse the prompt library online → [prompts.aiolaola.com](https://prompts.aiolaola.com)** — view any template/case and copy it with one click, no install.
+> 🧩 **Or skip straight to the [prompt builder](https://prompts.aiolaola.com/en/build.html)** — pick one of 21 genres, fill a few blanks, get the full multi-shot prompt + negative prompt. No Claude Code needed.
 
-> 📖 **免费配套学习** → [从零学会 AI 编程](https://aiolaola.com/?utm_source=github&utm_campaign=shortfilm)：180 节免费实操课 + 《AI 编程实战三卷书》在线阅读 + 实战社区 · 永久免费
+> 📖 **免费配套学习** → [从零学会 AI 编程](https://aiolaola.com/?utm_source=github&utm_campaign=shortfilm)（180 节）＋ [从零构建 AI 智能体](https://aiolaola.com/course/ai-agent?utm_source=github&utm_campaign=shortfilm)（40 节）
+> 🌍 Free companion courses in [English](https://aiolaola.com/en?utm_source=github&utm_campaign=shortfilm) · [日本語](https://aiolaola.com/ja?utm_source=github&utm_campaign=shortfilm) · [Español](https://aiolaola.com/es?utm_source=github&utm_campaign=shortfilm) · [한국어](https://aiolaola.com/ko?utm_source=github&utm_campaign=shortfilm) · [繁體中文](https://aiolaola.com/zh-Hant?utm_source=github&utm_campaign=shortfilm)
 
 <!-- ═══ HERO DEMO SLOT — publish your rendered 15s clip in 2 steps:
      1. Drag your demo.mp4 into any GitHub issue/PR comment box; copy the
@@ -23,15 +25,24 @@
 [![X Post](https://img.shields.io/badge/read_the_thread-@aibuzhiyu-1DA1F2?logo=x)](https://x.com/aibuzhiyu/status/2056426660577288645)
 [![Plugin](https://img.shields.io/badge/Claude_Code-plugin_install-blueviolet)](#install-claude-code)
 
-> The complete methodology + prompt library + Claude Code Skill behind
+> **A Claude Code Skill that turns any idea into a cinematic, model-ready
+> video prompt** — for Sora · Kling · Veo · Seedance. 21 genre templates,
+> a 5-stage structure, eval-tested. Distilled from
 > **[*Zombie Scavenger*](https://x.com/aibuzhiyu/status/2056426660577288645)**
-> by Mx-Shell — the AI short that Hollywood director PJ Ace called
+> by Mx-Shell — the AI short Hollywood director PJ Ace called
 > *"one of the best short films I've seen in years."*
 
 **[中文版 →](./README.zh.md)**
 
 > ⚡ **Quick start:** [one-page cheat sheet](./cheatsheet.md) ·
 > [failure→fix gallery](./cases.md)
+
+<p align="center">
+  <a href="https://prompts.aiolaola.com/en/build.html">
+    <img src="./assets/builder-preview.png" width="760" alt="No-install prompt builder — pick one of 21 genres, fill blanks, get the full multi-shot prompt + negative prompt">
+  </a>
+  <br><sub>🧩 The no-install <a href="https://prompts.aiolaola.com/en/build.html">prompt builder</a> — 21 genres · full multi-shot output · negative prompt included · runs entirely in your browser</sub>
+</p>
 
 ---
 

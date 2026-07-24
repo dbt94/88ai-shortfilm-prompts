@@ -189,6 +189,176 @@ def license_of(rel):
         return ("© Mx-Shell · 保留所有权利(教育存档参考)", "")
     return ("MIT · 可自由使用", "https://opensource.org/licenses/MIT")
 
+# ── builder data (docs/build.html 免装生成器的单一数据源) ────────────────────
+# 每条: (slug, emoji, 中文chip标签, 英文chip标签)。顺序 = 页面展示顺序,
+# 流量优先级靠前(萌宠/亲情线)。数据全部从 templates/<slug>(.zh).md 提取,
+# 不在这里手写提示词内容 —— 改模板后重跑本脚本即同步生成器。
+BUILDER_GENRES = [
+    ("pet-lifetime-narrative", "🐕", "萌宠亲情", "Pet · A Lifetime"),
+    ("family-recipe-farewell", "🍲", "妈妈的菜谱", "Family Recipe"),
+    ("elderly-cat-companion", "🐈", "奶奶与猫", "Grandma & Cat"),
+    ("animal-vlog", "🐶", "拟人动物VLog", "Animal Vlog"),
+    ("food-asmr", "🍳", "食物ASMR", "Food ASMR"),
+    ("product-commercial", "📦", "产品广告", "Product Ad"),
+    ("car-commercial", "🚗", "汽车广告", "Car Commercial"),
+    ("cyberpunk-city", "🌃", "赛博城市", "Cyberpunk City"),
+    ("sci-fi-space", "🚀", "科幻太空", "Sci-Fi Space"),
+    ("micro-drama", "🎭", "竖屏短剧", "Micro-Drama"),
+    ("movie-trailer", "🎟️", "电影预告片", "Movie Trailer"),
+    ("music-video", "🎵", "音乐MV", "Music Video"),
+    ("dance", "💃", "舞蹈编舞", "Dance"),
+    ("sports-slowmo", "🏃", "运动慢镜", "Sports Slow-mo"),
+    ("fashion-film", "👗", "时尚大片", "Fashion Film"),
+    ("travel-vlog", "🧳", "旅拍Vlog", "Travel Vlog"),
+    ("drone-fpv", "🛸", "无人机FPV", "Drone FPV"),
+    ("nature-timelapse", "🌄", "自然延时", "Nature Timelapse"),
+    ("anime-to-real", "✨", "动漫转真人", "Anime → Live"),
+    ("claymation", "🧱", "黏土定格", "Claymation"),
+    ("found-footage-horror", "📹", "伪纪录恐怖", "Found Footage"),
+]
+
+def _cjk(ch):
+    return ord(ch) >= 0x2E80  # CJK 表意文字 + 全角标点
+
+def _join_wrapped(lines):
+    """把 markdown 源里的硬换行段落拼回一段:中文接缝不加空格,英文加。"""
+    s = ""
+    for l in lines:
+        l = l.strip()
+        if not l:
+            continue
+        if not s:
+            s = l
+        elif _cjk(s[-1]) and _cjk(l[0]):
+            s += l
+        else:
+            s += " " + l
+    return s
+
+def _strip_inline_md(s):
+    s = s.replace("**", "")
+    s = re.sub(r"(?<!\*)\*([^*\n]+)\*(?!\*)", r"\1", s)
+    s = re.sub(r"`([^`]*)`", r"\1", s)
+    return s
+
+def _extract_vars(md):
+    """变量表 → [{name, example, alts}](取表格里首列为 `{{name}}` 的行)。"""
+    out = []
+    for m in re.finditer(r"^\|\s*`\{\{([a-z_]+)\}\}`\s*\|([^|]+)\|([^|]+)\|", md, re.M):
+        out.append({"name": m.group(1),
+                    "example": _strip_inline_md(m.group(2)).strip(),
+                    "alts": _strip_inline_md(m.group(3)).strip()})
+    return out
+
+def _extract_prompt_and_negative(md):
+    """「完整提示词」段 → (纯文本提示词, 负面提示词)。
+    分镜等 ``` 围栏内容原样保留;负面小节单独拆出。"""
+    lines = md.split("\n")
+    start = None
+    for i, l in enumerate(lines):
+        if re.match(r"^##\s+.*(完整提示词|complete prompt)", l, re.I):
+            start = i + 1
+            break
+    if start is None:
+        return None, ""
+    end = len(lines)
+    neg_at = None
+    for i in range(start, len(lines)):
+        if re.match(r"^##\s", lines[i]):
+            end = i
+            break
+        if neg_at is None and re.match(r"^###\s+.*(负面提示词|反向提示词|negative prompt)", lines[i], re.I):
+            neg_at = i
+    seg_end = neg_at if neg_at is not None else end
+
+    negative = ""
+    if neg_at is not None:
+        m = re.search(r"```[^\n]*\n([\s\S]*?)```", "\n".join(lines[neg_at:end]))
+        if m:
+            negative = m.group(1).strip()
+
+    # 主体段 → 纯文本:块类型 p=段落 b=列表项 f=围栏 h=小节标题
+    blocks, cur, fence, in_fence = [], [], [], False
+    def flush():
+        if cur:
+            typ = "b" if cur[0].startswith("- ") else "p"
+            blocks.append((typ, _join_wrapped(cur)))
+            cur.clear()
+    for l in lines[start:seg_end]:
+        if l.strip().startswith("```"):
+            if in_fence:
+                blocks.append(("f", "\n".join(fence).rstrip()))
+                fence = []
+            else:
+                flush()
+            in_fence = not in_fence
+            continue
+        if in_fence:
+            fence.append(l)
+            continue
+        if re.match(r"^\s*-{3,}\s*$", l) or not l.strip():
+            flush()
+            continue
+        m = re.match(r"^(#{1,6})\s+(.*)$", l)
+        if m:
+            flush()
+            blocks.append(("h", m.group(2).strip()))
+            continue
+        if re.match(r"^\s*[-*]\s+", l):
+            flush()
+            cur.append(re.sub(r"^\s*[-*]\s+", "- ", l))
+            continue
+        if cur and cur[0].startswith("- "):
+            cur.append(l)  # 列表项的续行
+            continue
+        cur.append(l)
+    flush()
+
+    out, prev = [], None
+    for typ, txt in blocks:
+        txt = _strip_inline_md(txt) if typ != "f" else txt
+        if prev == "b" and typ == "b":
+            out.append("\n" + txt)       # 相邻列表项单行排
+        elif out:
+            out.append("\n\n" + txt)
+        else:
+            out.append(txt)
+        prev = typ
+    return "".join(out).strip(), negative
+
+def write_builder_data():
+    import json
+    data = {"zh": [], "en": []}
+    for slug, ico, zh_label, en_label in BUILDER_GENRES:
+        for lang, label, fname in (("zh", zh_label, f"templates/{slug}.zh.md"),
+                                   ("en", en_label, f"templates/{slug}.md")):
+            path = os.path.join(ROOT, fname)
+            if not os.path.exists(path):
+                print(f"  ! builder: missing {fname}, skipped")
+                continue
+            with open(path, encoding="utf-8") as f:
+                md = f.read()
+            prompt, negative = _extract_prompt_and_negative(md)
+            if not prompt:
+                print(f"  ! builder: no prompt section in {fname}, skipped")
+                continue
+            data[lang].append({
+                "id": slug, "ico": ico, "label": label,
+                "title": first_h1(md),
+                "vars": _extract_vars(md),
+                "prompt": prompt,
+                "negative": negative,
+            })
+    out_path = os.path.join(DOCS, "assets", "builder-data.js")
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    with open(out_path, "w", encoding="utf-8") as f:
+        f.write("// generated by scripts/generate_pages.py — do not edit by hand\n"
+                "window.BUILDER_DATA = "
+                + json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+                + ";\n")
+    print(f"✓ builder data → docs/assets/builder-data.js "
+          f"(zh={len(data['zh'])} en={len(data['en'])} genres)")
+
 # ── page template ────────────────────────────────────────────────────────────
 PAGE = """<!DOCTYPE html>
 <html lang="{lang}">
@@ -318,6 +488,7 @@ def build():
         meta.append((slug, title, rel))
     write_index(meta)
     write_sitemap(pages)
+    write_builder_data()
     print(f"✓ generated {len(pages)} pages → docs/p/  + index.html + sitemap.xml")
     return pages
 
@@ -366,7 +537,9 @@ def write_index(meta):
 
 def write_sitemap(pages):
     urls = [f"  <url><loc>{SITE}/</loc><lastmod>{BUILD_DATE}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>",
+            f"  <url><loc>{SITE}/build.html</loc><lastmod>{BUILD_DATE}</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>",
             f"  <url><loc>{SITE}/en/</loc><lastmod>{BUILD_DATE}</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>",
+            f"  <url><loc>{SITE}/en/build.html</loc><lastmod>{BUILD_DATE}</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>",
             f"  <url><loc>{SITE}/p/</loc><lastmod>{BUILD_DATE}</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>"]
     for slug in pages:
         urls.append(f"  <url><loc>{SITE}/p/{slug}</loc><lastmod>{BUILD_DATE}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>")

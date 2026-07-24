@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7LBJRDWYYW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7LBJRDWYYW');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>提示词生成器 · 21 题材选题填空出完整提示词 | AI 短片提示词库</title>
+<meta name="description" content="选一个题材,填几个空,现场生成可直接投喂 Seedance / 可灵 / 即梦 / Sora / Veo 的完整多镜电影感提示词(含负面提示词)。21 个题材,与模板库同源。免安装、免登录、不留数据。">
+<meta name="keywords" content="AI 视频提示词生成器,提示词生成,Seedance 提示词,可灵提示词,Sora prompt generator,video prompt builder">
+<link rel="canonical" href="https://prompts.aiolaola.com/build.html">
+<meta name="robots" content="index, follow">
+<link rel="alternate" hreflang="zh-CN" href="https://prompts.aiolaola.com/build.html">
+<link rel="alternate" hreflang="en" href="https://prompts.aiolaola.com/en/build.html">
+<link rel="alternate" hreflang="x-default" href="https://prompts.aiolaola.com/build.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="提示词生成器 · 21 题材选题填空出完整提示词">
+<meta property="og:description" content="选题材、填几个空,现场生成完整多镜电影感提示词(含负面提示词),直接粘进 Seedance/可灵/Sora/Veo。免安装。">
+<meta property="og:url" content="https://prompts.aiolaola.com/build.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://prompts.aiolaola.com/assets/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="提示词生成器 · 21 题材选题填空出完整提示词">
+<meta name="twitter:image" content="https://prompts.aiolaola.com/assets/og-cover.png">
+<style>
+  :root{
+    --bg:#0a0b0e; --bg-soft:#0e1014; --panel:#14171d; --panel-2:#1b1f27;
+    --line:#272c36; --line-soft:#1d222b;
+    --txt:#eceef3; --txt-2:#aab2c0; --dim:#7b8494;
+    --gold:#e8b84b; --gold-soft:#f2d488; --blue:#6aa8ff; --green:#5fd08a;
+    --radius:15px; --radius-sm:10px;
+    --shadow:0 10px 40px -12px rgba(0,0,0,.7);
+    --glow:0 0 0 1px rgba(232,184,75,.35), 0 14px 40px -14px rgba(232,184,75,.25);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+    line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.035;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+  ::selection{background:rgba(232,184,75,.28)}
+
+  .nav{position:sticky;top:0;z-index:30;backdrop-filter:saturate(140%) blur(12px);
+    background:rgba(10,11,14,.78);border-bottom:1px solid var(--line-soft)}
+  .nav-in{display:flex;align-items:center;gap:16px;height:60px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.3px;white-space:nowrap}
+  .brand .mark{width:26px;height:26px;border-radius:7px;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--gold),#c9912b);color:#1a1505;font-size:15px;box-shadow:0 2px 10px rgba(232,184,75,.4)}
+  .brand b{font-size:15px}
+  .brand span{color:var(--dim);font-size:11px;font-weight:500}
+  .nav .spacer{flex:1}
+  .nav .gh{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:9px;font-size:13px;
+    font-weight:600;border:1px solid var(--line);color:var(--txt);white-space:nowrap}
+  .nav .gh:hover{border-color:var(--gold);text-decoration:none}
+  @media(max-width:680px){.brand span{display:none}}
+
+  .hero{position:relative;padding:54px 0 30px;overflow:hidden;
+    background:radial-gradient(1100px 420px at 18% -160px,rgba(232,184,75,.13),transparent 60%)}
+  .hero-in{position:relative;z-index:2}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;
+    color:var(--gold);font-weight:600;border:1px solid rgba(232,184,75,.3);border-radius:999px;padding:5px 13px;
+    background:rgba(232,184,75,.06);margin-bottom:18px}
+  .hero h1{font-size:clamp(26px,4.6vw,42px);line-height:1.16;margin:0 0 12px;letter-spacing:.3px;font-weight:800}
+  .hero h1 .g{background:linear-gradient(100deg,var(--gold),var(--gold-soft) 60%,#fff);
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p.lead{font-size:clamp(14px,2vw,16.5px);color:var(--txt-2);max-width:680px;margin:0}
+  .hero p.lead b{color:var(--txt)}
+
+  main{position:relative;z-index:2;padding-bottom:60px}
+  .builder{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start;margin-top:30px}
+  @media(max-width:900px){.builder{grid-template-columns:1fr}}
+
+  .panel{background:linear-gradient(180deg,var(--panel),#11141a);border:1px solid var(--line);
+    border-radius:var(--radius);padding:22px}
+  .panel h2{font-size:14px;margin:0 0 14px;color:var(--dim);letter-spacing:.6px;text-transform:uppercase;font-weight:700}
+
+  .genre-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-bottom:20px}
+  .g-chip{display:flex;align-items:center;gap:7px;padding:9px 11px;border-radius:10px;border:1px solid var(--line);
+    background:var(--panel-2);color:var(--txt-2);font-size:13px;cursor:pointer;user-select:none;transition:all .14s}
+  .g-chip:hover{border-color:var(--dim);color:var(--txt)}
+  .g-chip.active{border-color:var(--gold);background:rgba(232,184,75,.1);color:var(--gold-soft);font-weight:600}
+  .g-chip .ico{font-size:15px}
+
+  label{display:block;font-size:12.5px;color:var(--dim);margin:14px 0 6px;font-weight:600}
+  label code{color:var(--gold-soft);font-family:ui-monospace,Menlo,monospace;font-size:11.5px}
+  input[type=text],textarea{width:100%;padding:10px 12px;border-radius:9px;border:1px solid var(--line);
+    background:var(--bg-soft);color:var(--txt);font-size:13.5px;font-family:inherit;resize:vertical}
+  input[type=text]:focus,textarea:focus{outline:none;border-color:var(--gold)}
+  .hint{font-size:11.5px;color:var(--dim);margin-top:4px}
+  .narrative-note{margin-top:6px;padding:13px 15px;border:1px dashed rgba(232,184,75,.35);border-radius:var(--radius-sm);
+    background:rgba(232,184,75,.05);font-size:13px;color:var(--txt-2);line-height:1.7}
+  .narrative-note b{color:var(--gold-soft)}
+
+  .out-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+  .out-head h2{margin:0;flex:1}
+  .sbtn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:9px;border:1px solid var(--line);
+    background:var(--panel-2);color:var(--txt);font-size:13px;cursor:pointer;font-weight:600;transition:all .14s;white-space:nowrap}
+  .sbtn:hover{border-color:var(--gold);color:var(--gold)}
+  .sbtn.primary{background:linear-gradient(135deg,var(--gold),#d9a23a);color:#1a1505;border-color:transparent}
+  .sbtn.primary:hover{color:#1a1505;filter:brightness(1.05)}
+  .sbtn.mini{padding:5px 11px;font-size:12px}
+  .out-box{background:#0c0e13;border:1px solid var(--line);border-radius:11px;padding:16px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.75;
+    color:#d6dbe6;white-space:pre-wrap;word-break:break-word;max-height:560px;overflow-y:auto}
+  .neg-head{display:flex;align-items:center;gap:10px;margin:18px 0 10px}
+  .neg-head h3{margin:0;flex:1;font-size:13px;color:var(--dim);letter-spacing:.5px;text-transform:uppercase;font-weight:700}
+  .neg-box{background:#120d0d;border:1px solid #3a2a2a;border-radius:11px;padding:13px 15px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;line-height:1.7;
+    color:#c9a9a9;white-space:pre-wrap;word-break:break-word;max-height:170px;overflow-y:auto}
+  .more-link{margin-top:14px;font-size:12.5px;color:var(--dim)}
+
+  .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);z-index:80;
+    background:var(--panel);border:1px solid var(--green);color:var(--txt);padding:11px 20px;border-radius:11px;
+    font-size:14px;font-weight:600;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:all .25s}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  .toast .dot{color:var(--green);margin-right:7px}
+
+  .why{margin-top:34px;padding:18px 20px;border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+    background:var(--panel);font-size:13px;color:var(--txt-2)}
+  .why b{color:var(--txt)}
+
+  footer{position:relative;z-index:2;border-top:1px solid var(--line);margin-top:44px;padding:26px 0 46px;color:var(--dim);font-size:13px}
+  footer a{color:var(--txt-2);text-decoration:underline}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="wrap nav-in">
+  <a class="brand" href="./">
+    <span class="mark">🎬</span>
+    <b>AI 短片提示词库</b><span>Cinematic Prompt Library</span>
+  </a>
+  <span class="spacer"></span>
+  <a class="gh" href="./">← 提示词库</a>
+  <a class="gh" href="https://github.com/jnMetaCode/ai-shortfilm-prompts" target="_blank">★ GitHub</a>
+</div></nav>
+
+<header class="hero"><div class="wrap hero-in">
+  <div class="eyebrow">免安装 · 免登录 · 不留数据 · 21 题材</div>
+  <h1>选题材、填几个空<br><span class="g">现场生成完整多镜提示词</span></h1>
+  <p class="lead">输出与 <a href="./#lib">模板库</a> <b>同源的完整提示词</b>——核心主题 / 人物场景 / 氛围画质 /
+    运镜规则 / 完整分镜表 + 负面提示词,直接粘进 <b>Seedance / 可灵 / 即梦 / Sora / Veo</b>。
+    想让 AI 按你的点子从零重写?装 <a href="https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/skills/shortfilm-prompt/SKILL.md" target="_blank">Claude Code Skill</a>。</p>
+</header>
+
+<main class="wrap">
+  <div class="builder">
+    <div class="panel">
+      <h2>1 · 选题材</h2>
+      <div class="genre-grid" id="genre-grid"></div>
+      <h2 style="margin-top:22px">2 · 填空(可留空)</h2>
+      <div id="var-form"></div>
+    </div>
+
+    <div class="panel">
+      <div class="out-head">
+        <h2 style="margin:0">生成结果 · 完整提示词</h2>
+        <button class="sbtn primary" id="copy-btn">⧉ 复制提示词</button>
+      </div>
+      <div class="out-box" id="output"></div>
+      <div id="neg-wrap">
+        <div class="neg-head">
+          <h3>负面提示词(粘进模型的独立负面框)</h3>
+          <button class="sbtn mini" id="copy-neg-btn">⧉ 复制</button>
+        </div>
+        <div class="neg-box" id="neg-output"></div>
+      </div>
+      <p class="more-link" id="more-link"></p>
+    </div>
+  </div>
+
+  <div class="why">
+    <b>为什么这样写?</b> 三条反直觉规则贯穿全部模板:① 用真实相机/镜头型号而非「电影感」这种空泛词;
+    ② 主动描述瑕疵(磨损/污渍/疲惫感),完美看起来才假;③ 结尾留白,不要配乐堆情绪、不要爆炸式收尾。
+    完整方法论见 <a href="https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/methodology.zh.md" target="_blank">methodology.zh.md</a>。
+  </div>
+</main>
+
+<div class="toast" id="toast"><span class="dot">✓</span><span id="toast-t">已复制</span></div>
+
+<footer><div class="wrap">
+  <p style="margin:0 0 6px">本工具纯前端运行,不上传、不记录你填写的任何内容。方法论 / 数据 MIT 协议,
+    源码见 <a href="https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/docs/build.html" target="_blank">build.html</a>。</p>
+  <p style="margin:0">题材覆盖不全?欢迎
+    <a href="https://github.com/jnMetaCode/ai-shortfilm-prompts/issues" target="_blank">提 issue</a> 补充。</p>
+</div></footer>
+
+<script src="./assets/builder-data.js"></script>
+<script>
+const DATA = window.BUILDER_DATA.zh;
+const ATTRIB = "\n\n—— 提示词生成自 prompts.aiolaola.com(21 题材 · 免费 · 开源)";
+const initG = new URLSearchParams(location.search).get('g');
+let cur = DATA.find(g => g.id === initG) || DATA[0];
+
+const $ = id => document.getElementById(id);
+const grid = $('genre-grid'), form = $('var-form');
+
+function renderChips(){
+  grid.textContent = '';
+  for(const g of DATA){
+    const el = document.createElement('div');
+    el.className = 'g-chip' + (g.id === cur.id ? ' active' : '');
+    const ico = document.createElement('span'); ico.className = 'ico'; ico.textContent = g.ico;
+    const lb = document.createElement('span'); lb.textContent = g.label;
+    el.append(ico, lb);
+    el.onclick = () => { cur = g; history.replaceState(null, '', '?g=' + g.id); renderChips(); renderForm(); render(); };
+    grid.appendChild(el);
+  }
+}
+
+function renderForm(){
+  form.textContent = '';
+  if(!cur.vars.length){
+    const note = document.createElement('div');
+    note.className = 'narrative-note';
+    note.innerHTML = '这个题材是<b>精写的完整叙事范例</b>(整段分镜讲完一个故事),不走填空——' +
+      '直接复制右侧全文,再把主角、场景等细节换成你自己的设定即可。' +
+      '想让 AI 按你的点子整篇重写,用 <a href="https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/skills/shortfilm-prompt/SKILL.md" target="_blank">Claude Code Skill</a>。';
+    form.appendChild(note);
+    return;
+  }
+  cur.vars.forEach((v, i) => {
+    const lab = document.createElement('label');
+    lab.htmlFor = 'var-' + v.name;
+    const code = document.createElement('code'); code.textContent = '{{' + v.name + '}}';
+    lab.append(String(i + 1) + ' · ', code);
+    const inp = document.createElement('input');
+    inp.type = 'text'; inp.id = 'var-' + v.name;
+    inp.placeholder = '例:' + v.example;
+    inp.oninput = render;
+    const hint = document.createElement('p');
+    hint.className = 'hint'; hint.textContent = '可换:' + v.alts;
+    form.append(lab, inp, hint);
+  });
+  const tip = document.createElement('p');
+  tip.className = 'hint'; tip.style.marginTop = '12px';
+  tip.textContent = '留空的变量会保留 {{...}} 占位符,复制后自行补上也行。';
+  form.appendChild(tip);
+}
+
+function render(){
+  let p = cur.prompt;
+  for(const v of cur.vars){
+    const el = $('var-' + v.name);
+    const val = el && el.value.trim();
+    if(val) p = p.split('{{' + v.name + '}}').join(val);
+  }
+  $('output').textContent = p;
+  const hasNeg = !!cur.negative;
+  $('neg-wrap').style.display = hasNeg ? '' : 'none';
+  if(hasNeg) $('neg-output').textContent = cur.negative;
+  $('more-link').innerHTML = '';
+  const a = document.createElement('a');
+  a.href = 'p/' + cur.id + '.zh.html'; a.target = '_blank';
+  a.textContent = cur.label + ' 模板原文(变量表 + 设计思路)';
+  $('more-link').append('想看这套提示词为什么这么搭? → ', a);
+}
+
+async function cp(text, msg){
+  try{ await navigator.clipboard.writeText(text); }catch(e){ toast('复制失败'); return; }
+  toast(msg);
+}
+function toast(t){
+  const e = $('toast'); $('toast-t').textContent = t; e.classList.add('show');
+  clearTimeout(toast._t); toast._t = setTimeout(() => e.classList.remove('show'), 1800);
+}
+$('copy-btn').onclick = () => cp($('output').textContent + ATTRIB, '完整提示词已复制 · 可直接粘进视频模型');
+$('copy-neg-btn').onclick = () => cp($('neg-output').textContent, '负面提示词已复制 · 粘进独立负面框');
+
+renderChips(); renderForm(); render();
+</script>
+</body>
+</html>

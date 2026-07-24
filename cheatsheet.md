@@ -30,6 +30,28 @@
 
 ---
 
+## Reroll & budget expectations (set this before you start)
+
+Treat a prompt as **a ticket to draw**, not a deterministic recipe — even
+the exact same prompt run twice gives different output. Budget
+accordingly, per shot:
+
+| Shot difficulty | Rerolls to expect |
+|---|---|
+| Easy (static, simple action) | 2–3 |
+| Hard (complex motion, specific camera move) | 20+ |
+
+**Project-level reference** (Mx-Shell's self-reported numbers for
+*Zombie Scavenger*): ~400 generated images + 200+ video shots to land
+the final ~40 usable clips — roughly a **5–10× reroll ratio** between
+what you generate and what you keep. If you're planning N final shots,
+budget generation time/cost for 5–10×N attempts, not N.
+
+Full source discussion: [faq.md § Word limits / rerolls / non-reproducibility](./faq.md#word-limits--rerolls--non-reproducibility).
+Planning a 3+ shot piece? Lock consistency *before* you start rerolling — see [templates/project-planner.md](./templates/project-planner.md).
+
+---
+
 ## Camera + lens lookup
 
 | Aesthetic | Camera + lens |

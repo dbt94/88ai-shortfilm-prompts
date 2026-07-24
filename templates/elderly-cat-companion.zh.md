@@ -79,7 +79,7 @@ ARRICAM 摄影机 + Cooke S4 复古定焦镜头 + 柯达 Vision3 250D 35mm 胶�
   那盏暖灯还亮着。
 ```
 
-### 反向提示词（Seedance / 可灵 —— 粘进独立反向框）
+### 负面提示词（Seedance / 可灵 —— 粘进独立负面框）
 ```
 blurry, low resolution, soft focus, watermark, text overlay, subtitles, logo, distorted face, asymmetric eyes, extra limbs, deformed paws, melting/morphing geometry, the cat changing color or markings between shots, the woman changing identity or face between shots, oversaturated colors, plastic skin, glossy CG render, video-game look, 3D cartoon, anime shading, flat even studio lighting, frame flicker, ghosting, jarring hard cuts, lifeless locked-off camera, sappy lens flare, on-screen heart symbols
 ```
