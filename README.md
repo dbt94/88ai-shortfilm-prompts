@@ -5,6 +5,7 @@
 
 > 📖 **免费配套学习** → [从零学会 AI 编程](https://aiolaola.com/?utm_source=github&utm_campaign=shortfilm)（180 节）＋ [从零构建 AI 智能体](https://aiolaola.com/course/ai-agent?utm_source=github&utm_campaign=shortfilm)（40 节）
 > 🌍 Free companion courses in [English](https://aiolaola.com/en?utm_source=github&utm_campaign=shortfilm) · [日本語](https://aiolaola.com/ja?utm_source=github&utm_campaign=shortfilm) · [Español](https://aiolaola.com/es?utm_source=github&utm_campaign=shortfilm) · [한국어](https://aiolaola.com/ko?utm_source=github&utm_campaign=shortfilm) · [繁體中文](https://aiolaola.com/zh-Hant?utm_source=github&utm_campaign=shortfilm)
+> 🎬 **New — before you use these templates** → [AI 漫剧实战·第一部：能不能做](https://aiolaola.com/course/ai-comic-drama?utm_source=github&utm_campaign=shortfilm) — a free 35-lesson course (Chinese) on the four gates you should clear *before* generating: platform compliance & registration tiers, what six tool ToS actually let you sell, real cost per usable second, and spec-first storyboarding. First 12 lessons need no login.
 
 <!-- ═══ HERO DEMO SLOT — publish your rendered 15s clip in 2 steps:
      1. Drag your demo.mp4 into any GitHub issue/PR comment box; copy the
@@ -346,6 +347,7 @@ by [@jnMetaCode](https://github.com/jnMetaCode):
 - [ai-coding-guide](https://github.com/jnMetaCode/ai-coding-guide) — 66 Claude Code tips
 - [shellward](https://github.com/jnMetaCode/shellward) — AI Agent security middleware
 - [ai-coding-trilogy](https://github.com/jnMetaCode/ai-coding-trilogy) — AI coding three-volume book
+- [AI 漫剧实战·第一部](https://aiolaola.com/course/ai-comic-drama?utm_source=github&utm_campaign=shortfilm) — Free course (zh): compliance, tool ToS, real costs & spec-first storyboarding for AI short drama — the judgment layer these templates sit on top of
 
 All projects share the same `SKILL.md` format. The video skill stacks
 freely with any of them.
