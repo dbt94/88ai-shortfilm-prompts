@@ -49,7 +49,9 @@ CATEGORY = {
 # 所以只认「标题里出现"变量"」，别要求它结尾（travel-vlog 那条就是"先把变量定下来"）
 VAR_HEADING = re.compile(r"^##\s+.*(?:变量|variable).*$", re.M | re.I)
 # 小节名各文件略有出入：多数写「完整提示词（可直接复制）」，15s-transformation 写的是「模板正文」
-PROMPT_HEADING = re.compile(r"^##\s+(?:完整提示词|模板正文|Full prompt|Template body)", re.M | re.I)
+# 英文侧写法是 "The complete prompt (copy-paste ready)" / "Template body"，
+# 中文侧是「完整提示词（可直接复制）」「模板正文」——只认关键词，别锚死整句
+PROMPT_HEADING = re.compile(r"^##\s+(?:.*完整提示词|.*模板正文|.*complete prompt|.*full prompt|.*template body|template)", re.M | re.I)
 ANY_H2 = re.compile(r"^##\s+", re.M)
 
 
