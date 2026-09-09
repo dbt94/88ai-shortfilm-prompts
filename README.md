@@ -342,10 +342,11 @@ This is the video-prompt sibling of the AI-coding ecosystem maintained
 by [@jnMetaCode](https://github.com/jnMetaCode):
 
 - [superpowers-zh](https://github.com/jnMetaCode/superpowers-zh) — Chinese-enhanced edition of `obra/superpowers` (TDD / debug / git workflow skills)
-- [agency-agents-zh](https://github.com/jnMetaCode/agency-agents-zh) — 211 plug-and-play AI expert personas
+- [agency-agents-zh](https://github.com/jnMetaCode/agency-agents-zh) — 277 plug-and-play AI expert personas
 - [agency-orchestrator](https://github.com/jnMetaCode/agency-orchestrator) — Multi-agent collaboration orchestrator
 - [ai-coding-guide](https://github.com/jnMetaCode/ai-coding-guide) — 66 Claude Code tips
 - [shellward](https://github.com/jnMetaCode/shellward) — AI Agent security middleware
+- [openshorts](https://github.com/jnMetaCode/openshorts) — Local-first short-video pipeline: topic in, finished video out (first one costs $0, no API key)
 - [ai-coding-trilogy](https://github.com/jnMetaCode/ai-coding-trilogy) — AI coding three-volume book
 - [AI 漫剧实战·第一部](https://aiolaola.com/course/ai-comic-drama?utm_source=github&utm_campaign=shortfilm) — Free course (zh): compliance, tool ToS, real costs & spec-first storyboarding for AI short drama — the judgment layer these templates sit on top of
 
