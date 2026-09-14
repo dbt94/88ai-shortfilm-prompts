@@ -10,10 +10,11 @@
 > 模板解决"怎么写提示词",这门课解决"生成出来的东西能不能上线、能不能卖"。
 > 182 节免费实操课 + 《AI 编程实战三卷书》在线读 + 实战社区 + AI 助教 · **永久免费,登录即学。**
 >
-> 🌟 **姐妹项目**:[agency-agents-zh ⭐20.4k](https://github.com/jnMetaCode/agency-agents-zh) · [superpowers-zh ⭐8k](https://github.com/jnMetaCode/superpowers-zh) · [agency-orchestrator ⭐2.2k](https://github.com/jnMetaCode/agency-orchestrator) · [ai-coding-trilogy](https://github.com/jnMetaCode/ai-coding-trilogy) · [ai-coding-guide ⭐521](https://github.com/jnMetaCode/ai-coding-guide) · [openshorts](https://github.com/jnMetaCode/openshorts)
+> 🌟 **姐妹项目**:[agency-agents-zh ⭐20.6k](https://github.com/jnMetaCode/agency-agents-zh) · [superpowers-zh ⭐8k](https://github.com/jnMetaCode/superpowers-zh) · [agency-orchestrator ⭐2.2k](https://github.com/jnMetaCode/agency-orchestrator) · [ai-coding-trilogy](https://github.com/jnMetaCode/ai-coding-trilogy) · [ai-coding-guide ⭐523](https://github.com/jnMetaCode/ai-coding-guide) · [openshorts](https://github.com/jnMetaCode/openshorts)
 <!-- aiolaola:end -->
 
 > 🌐 **在线浏览提示词库 → [prompts.aiolaola.com](https://prompts.aiolaola.com)** —— 点开即看任意模板/案例,一键复制,免安装。
+> 🎥 **提示词写好了，想直接出成片？** → 同作者的 [开片 OpenShorts](https://os.aiolaola.com)：一段故事 → 三镜 AI 短剧，花钱前逐镜报价，本机草稿档 0 元。
 > 🧩 **或直接用 [提示词生成器](https://prompts.aiolaola.com/build.html)** —— 21 题材选一个、填几个空,现场生成完整多镜提示词 + 负面提示词,不用装 Claude Code。
 
 <!-- ═══ 顶部 demo 片位 —— 出片后两步发布：
@@ -277,10 +278,11 @@ git submodule add https://github.com/jnMetaCode/ai-shortfilm-prompts.git .claude
 本项目是 [@jnMetaCode](https://github.com/jnMetaCode) 系列的视频方向第一个项目。其他方向：
 
 - [superpowers-zh](https://github.com/jnMetaCode/superpowers-zh) —— 编程方法论 skill 中文增强版
-- [agency-agents-zh](https://github.com/jnMetaCode/agency-agents-zh) —— 211 个 AI 专家角色
+- [agency-agents-zh](https://github.com/jnMetaCode/agency-agents-zh) —— 277 个 AI 专家角色
 - [agency-orchestrator](https://github.com/jnMetaCode/agency-orchestrator) —— 多角色协作编排
 - [ai-coding-guide](https://github.com/jnMetaCode/ai-coding-guide) —— Claude Code 技巧速查
 - [shellward](https://github.com/jnMetaCode/shellward) —— AI Agent 安全中间件
+- [openshorts](https://github.com/jnMetaCode/openshorts) —— 开片：本地优先的短视频生产线，话题进成片出（免费路径 0 元 0 key；AI 短剧线接了本仓的这些模型）
 - [ai-coding-trilogy](https://github.com/jnMetaCode/ai-coding-trilogy) —— AI 编程实战三卷书
 
 ---
@@ -303,6 +305,15 @@ git submodule add https://github.com/jnMetaCode/ai-shortfilm-prompts.git .claude
 <sub>Veo 3.1、Runway Gen-4、可灵、Wan、Sora 的时长与负向机制在 2026 年多个厂商/帮助文档来源中一致；Seedance 2.0 与海螺的数字多来自第三方指南（`~` 视为近似）。"Veo ~148 秒""Sora/Pika ~25 秒"来自扩展/关键帧功能，**并非**普通单镜头生成。IP 过滤"严格度"为定性判断。</sub>
 
 <sub>表中工具名即注册入口；小云雀 / 即梦 / 可灵 为邀请链接（注册双方各得免费积分）。</sub>
+
+> 🎥 **提示词写好了，片子谁来出？** 同作者的 [开片 OpenShorts](https://os.aiolaola.com) 把一段故事变成三镜 AI 短剧
+> （Seedance / MiniMax-H3 / Sora / 可灵），**花钱之前**逐镜报价，还有 0 元的本机草稿档（MiniMax-H3 GGUF，跑在 stable-diffusion.cpp 上）：
+>
+> ```bash
+> npx openshorts drama --plan -i story="<你的故事>"        # 先逐镜看花费
+> npx openshorts drama        -i story="<你的故事>"        # 再出片
+> ```
+> 仓库：https://github.com/jnMetaCode/openshorts
 
 ---
 

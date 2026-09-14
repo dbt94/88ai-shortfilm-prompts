@@ -1,6 +1,7 @@
 # ai-shortfilm-prompts
 
 > 🌐 **Browse the prompt library online → [prompts.aiolaola.com](https://prompts.aiolaola.com)** — view any template/case and copy it with one click, no install.
+> 🎥 **Want the prompt rendered into a finished film?** → [OpenShorts](https://os.aiolaola.com/en/) (same author): story → 3-shot AI mini-drama, cost quoted per shot before you spend, $0 on-device draft tier.
 > 🧩 **Or skip straight to the [prompt builder](https://prompts.aiolaola.com/en/build.html)** — pick one of 21 genres, fill a few blanks, get the full multi-shot prompt + negative prompt. No Claude Code needed.
 
 > 📖 **免费配套学习** → [从零学会 AI 编程](https://aiolaola.com/?utm_source=github&utm_campaign=shortfilm)（182 节）＋ [从零构建 AI 智能体](https://aiolaola.com/course/ai-agent?utm_source=github&utm_campaign=shortfilm)（40 节）（站上共 13 门课、648 节，**全部 ¥0**——另有 AI 绘画 / 写小说 / 漫剧 / 量化 / DeepSeek / 深度专注 等）
@@ -333,6 +334,16 @@ features, **not** plain single-shot generation. IP-filter "strictness" labels
 are qualitative.</sub>
 
 <sub>Tool names link to their sign-up pages; Xiaoyunque / Jimeng / Kling are invite links (both sides get free credits).</sub>
+
+> 🎥 **Prompt written — now want the film?** [OpenShorts](https://os.aiolaola.com/en/) (same author) turns a story into a
+> 3-shot AI mini-drama with Seedance / MiniMax-H3 / Sora / Kling, quotes the cost per shot **before** spending, and has a
+> $0 on-device draft tier (MiniMax-H3 GGUF via stable-diffusion.cpp):
+>
+> ```bash
+> npx openshorts drama --plan -i story="<your story>"        # price every shot first
+> npx openshorts drama        -i story="<your story>"        # then render
+> ```
+> Repo: https://github.com/jnMetaCode/openshorts
 
 ---
 
