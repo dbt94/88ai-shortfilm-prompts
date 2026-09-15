@@ -9,6 +9,9 @@
 > 光线 + 墙上的照片来推进；暖色调全片不变。结尾克制（规则 6）—— 窗台上的猫和椅背上
 > 的开衫替你哭。
 >
+> 🎬 **成片示例：** 这个故事压成 3 镜、用 [开片 OpenShorts](https://github.com/jnMetaCode/openshorts)
+> 实际出片 —— [案例页（含实际提示词与哪一镜不行）](https://github.com/jnMetaCode/openshorts/tree/main/docs/cases/drama-grandma-cat)。
+>
 > **[English →](./elderly-cat-companion.md)**
 
 ---

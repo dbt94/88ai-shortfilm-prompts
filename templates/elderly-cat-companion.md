@@ -13,6 +13,10 @@
 > ending (Rule 6) — the cat on the windowsill and the cardigan over the
 > chair do the crying.
 >
+> 🎬 **Rendered example:** this story, condensed to 3 shots and rendered
+> with [OpenShorts](https://github.com/jnMetaCode/openshorts) —
+> [case page, prompts & what fell short](https://github.com/jnMetaCode/openshorts/tree/main/docs/cases/drama-grandma-cat) (zh).
+>
 > **[中文版 →](./elderly-cat-companion.zh.md)**
 
 ---
