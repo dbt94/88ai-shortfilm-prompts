@@ -4,9 +4,9 @@
 > 🎥 **Want the prompt rendered into a finished film?** → [OpenShorts](https://os.aiolaola.com/en/) (same author): story → 3-shot AI mini-drama, cost quoted per shot before you spend, $0 on-device draft tier.
 > 🧩 **Or skip straight to the [prompt builder](https://prompts.aiolaola.com/en/build.html)** — pick one of 21 genres, fill a few blanks, get the full multi-shot prompt + negative prompt. No Claude Code needed.
 
-> 📖 **免费配套学习** → [从零学会 AI 编程](https://aiolaola.com/?utm_source=github&utm_campaign=shortfilm)（182 节）＋ [从零构建 AI 智能体](https://aiolaola.com/course/ai-agent?utm_source=github&utm_campaign=shortfilm)（40 节）（站上共 13 门课、648 节，**全部 ¥0**——另有 AI 绘画 / 写小说 / 漫剧 / 量化 / DeepSeek / 深度专注 等）
+> 📖 **免费配套学习** → [从零学会 AI 编程](https://aiolaola.com/?utm_source=github&utm_campaign=shortfilm)（182 节）＋ [从零构建 AI 智能体](https://aiolaola.com/course/ai-agent?utm_source=github&utm_campaign=shortfilm)（40 节）（站上共 14 门课、700 节，**全部 ¥0**——另有 大模型原理 / AI 绘画 / 写小说 / 漫剧 / 量化 / DeepSeek / 深度专注 等）
 > 🌍 Free companion courses in [English](https://aiolaola.com/en?utm_source=github&utm_campaign=shortfilm) · [日本語](https://aiolaola.com/ja?utm_source=github&utm_campaign=shortfilm) · [Español](https://aiolaola.com/es?utm_source=github&utm_campaign=shortfilm) · [한국어](https://aiolaola.com/ko?utm_source=github&utm_campaign=shortfilm) · [繁體中文](https://aiolaola.com/zh-Hant?utm_source=github&utm_campaign=shortfilm)
-> 🎬 **New — before you use these templates** → [AI 漫剧实战·第一部：能不能做](https://aiolaola.com/course/ai-comic-drama?utm_source=github&utm_campaign=shortfilm) — a free 35-lesson course (Chinese) on the four gates you should clear *before* generating: platform compliance & registration tiers, what six tool ToS actually let you sell, real cost per usable second, and spec-first storyboarding. First 12 lessons need no login.
+> 🎬 **New — before you use these templates** → [AI 漫剧实战·一条片子的完整制作日志](https://aiolaola.com/course/ai-comic-drama?utm_source=github&utm_campaign=shortfilm) — a free 42-lesson course (Chinese) that takes one real AI short film apart: storyboard spec, prompts, rolling and picking takes, editing to a final cut, and the compliance check before publishing — failed attempts included. First 12 lessons need no login.
 
 <!-- ═══ HERO DEMO SLOT — publish your rendered 15s clip in 2 steps:
      1. Drag your demo.mp4 into any GitHub issue/PR comment box; copy the
@@ -359,7 +359,7 @@ by [@jnMetaCode](https://github.com/jnMetaCode):
 - [shellward](https://github.com/jnMetaCode/shellward) — AI Agent security middleware
 - [openshorts](https://github.com/jnMetaCode/openshorts) — Local-first short-video pipeline: topic in, finished video out (first one costs $0, no API key)
 - [ai-coding-trilogy](https://github.com/jnMetaCode/ai-coding-trilogy) — AI coding three-volume book
-- [AI 漫剧实战·第一部](https://aiolaola.com/course/ai-comic-drama?utm_source=github&utm_campaign=shortfilm) — Free course (zh): compliance, tool ToS, real costs & spec-first storyboarding for AI short drama — the judgment layer these templates sit on top of
+- [AI 漫剧实战·一条片子的完整制作日志](https://aiolaola.com/course/ai-comic-drama?utm_source=github&utm_campaign=shortfilm) — Free course (zh): one real AI short film from storyboard to final cut, failures included — the workflow these templates fit into
 
 All projects share the same `SKILL.md` format. The video skill stacks
 freely with any of them.
